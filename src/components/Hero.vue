@@ -12,7 +12,7 @@
                                     <span class="header-caption" id="page-top">
                                         <!-- type headline start-->
                                         <span class="cd-headline clip is-full-width">
-                                            <span>a </span>
+                                            <span>a  </span>
                                             <!-- ROTATING TEXT -->
                                             <span class="cd-words-wrapper">
                                                 <b class="is-visible">Full Stack Developer.</b>
