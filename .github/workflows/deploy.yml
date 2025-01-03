@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - vue-portfolio
+      - main
 
 jobs:
   build:
