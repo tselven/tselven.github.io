@@ -222,6 +222,7 @@
             color: var(--text-gray);
             margin-bottom: 3rem;
             line-height: 1.8;
+            text-align: justify;
         }
 
         .profile-container {
@@ -643,7 +644,7 @@
         /* Responsive */
         @media (max-width: 768px) {
             .hero-title {
-                font-size: 3rem;
+                font-size: 1.5rem;
             }
 
             .hero-subtitle {
@@ -752,7 +753,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#home">Poologarsa Thamilselven</a>
+            <a class="navbar-brand" href="#home">P. Thamilselven</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -773,16 +774,19 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 hero-content">
+                <div class="col-lg-6 hero-content mb-5">
                     <h1 class="hero-title neon-text">P. Thamilselven</h1>
                     <h2 class="hero-subtitle glow-text">Software Solutions Architect</h2>
                     <p class="hero-description">
-                       Engineering scalable and maintainable digital platforms with Laravel, Node.js, Vue, and MongoDB. Blending clean backend architecture with lightweight frontend frameworks and DevOps-driven automation. Passionate about building end-to-end systems—from infrastructure to user experience—that are optimized for performance, flexibility, and long-term growth.
+                        Engineering scalable and maintainable digital platforms with Laravel, Node.js, Vue, and MongoDB.
+                        Passionate about building end-to-end systems—from infrastructure to user experience—that are
+                        optimized for performance, flexibility, and long-term growth.
                     </p>
-                    <div class="d-flex flex-wrap gap-3 mb-4">
-                        <a href="#projects" class="btn btn-neon">VIEW PORTFOLIO</a>
-                        <a href="#contact" class="btn btn-neon btn-neon-secondary">HIRE ME</a>
+                    <div class="d-flex flex-wrap flex-column flex-sm-row gap-3 mb-4">
+                        <a href="#projects" class="btn btn-neon flex-fill text-center">VIEW PORTFOLIO</a>
+                        <a href="#contact" class="btn btn-neon btn-neon-secondary flex-fill text-center">HIRE ME</a>
                     </div>
+
                     <div class="social-links">
                         <a href="#" class="text-decoration-none"><i class="fab fa-github"></i></a>
                         <a href="#" class="text-decoration-none"><i class="fab fa-linkedin"></i></a>
@@ -965,7 +969,8 @@
                             </div>
                             <div class="d-flex gap-2">
                                 <a href="#" class="btn btn-sm btn-neon">Live Demo</a>
-                                <a href="#" class="btn btn-sm btn-neon-secondary">GitHub<br/><i class="fab fa-github fs-3"></i></a>
+                                <a href="#" class="btn btn-sm btn-neon-secondary">GitHub<br /><i
+                                        class="fab fa-github fs-3"></i></a>
                             </div>
                         </div>
                     </div>
@@ -985,7 +990,8 @@
                             </div>
                             <div class="d-flex gap-2">
                                 <a href="#" class="btn btn-sm btn-neon">Live Demo</a>
-                                <a href="#" class="btn btn-sm btn-neon-secondary">GitHub<br/><i class="fab fa-github fs-3"></i></a>
+                                <a href="#" class="btn btn-sm btn-neon-secondary">GitHub<br /><i
+                                        class="fab fa-github fs-3"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1005,7 +1011,8 @@
                             </div>
                             <div class="d-flex gap-2">
                                 <a href="#" class="btn btn-sm btn-neon">Live Demo</a>
-                                <a href="#" class="btn btn-sm btn-neon-secondary">GitHub<br/><i class="fab fa-github fs-3"></i></a>
+                                <a href="#" class="btn btn-sm btn-neon-secondary">GitHub<br /><i
+                                        class="fab fa-github fs-3"></i></a>
                             </div>
                         </div>
                     </div>
@@ -1063,49 +1070,49 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
-    particlesJS('particles', {
-        "particles": {
-            "number": {
-                "value": 80,
-                "density": { "enable": true, "value_area": 800 }
+        particlesJS('particles', {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": { "enable": true, "value_area": 800 }
+                },
+                "color": { "value": ["#00ffff", "#ff0080", "#39ff14", "#bf00ff"] },
+                "shape": {
+                    "type": "circle",
+                    "stroke": { "width": 0, "color": "#000000" }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": true,
+                    "anim": { "enable": false }
+                },
+                "size": {
+                    "value": 4,
+                    "random": true
+                },
+                "line_linked": {
+                    "enable": false
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out"
+                }
             },
-            "color": { "value": ["#00ffff", "#ff0080", "#39ff14", "#bf00ff"] },
-            "shape": {
-                "type": "circle",
-                "stroke": { "width": 0, "color": "#000000" }
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": { "enable": true, "mode": "repulse" },
+                    "onclick": { "enable": true, "mode": "push" },
+                    "resize": true
+                }
             },
-            "opacity": {
-                "value": 0.5,
-                "random": true,
-                "anim": { "enable": false }
-            },
-            "size": {
-                "value": 4,
-                "random": true
-            },
-            "line_linked": {
-                "enable": false
-            },
-            "move": {
-                "enable": true,
-                "speed": 2,
-                "direction": "none",
-                "random": true,
-                "straight": false,
-                "out_mode": "out"
-            }
-        },
-        "interactivity": {
-            "detect_on": "canvas",
-            "events": {
-                "onhover": { "enable": true, "mode": "repulse" },
-                "onclick": { "enable": true, "mode": "push" },
-                "resize": true
-            }
-        },
-        "retina_detect": true
-    });
-</script>
+            "retina_detect": true
+        });
+    </script>
 
     <script>
         // Loading Animation
