@@ -23,8 +23,6 @@
     <meta name="author" content="Poologarasa Thamilselven" />
     <meta name="robots" content="index, follow" />
 
-    <!-- <link rel="canonical" href="https://tselven.com/"> -->
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -65,7 +63,7 @@
           <p class="title">Software Engineer | Backend & DevOps</p>
           <div class="location">
             <i class="fas fa-map-marker-alt"></i>
-            <span>Sri Lanka</span>
+            <span>Jaffna, Sri Lanka</span>
           </div>
           <div class="social-links">
             <a
@@ -116,6 +114,19 @@
               <i class="fas fa-envelope"></i>
             </a>
           </div>
+          
+          <!-- CTA Buttons -->
+          <div class="cta-buttons">
+            <a href="#contact-form" class="cta-btn cta-primary">
+              <i class="fas fa-briefcase"></i>
+              Hire Me
+            </a>
+            <a href="./THAMILSELVEN_CV.pdf" class="cta-btn cta-secondary" download>
+              <i class="fas fa-download"></i>
+              Get Resume
+            </a>
+          </div>
+
         </div>
       </div>
 
@@ -280,6 +291,16 @@
               </div>
             </div>
             <div class="timeline-date">2025 - Present</div>
+            <ul class="timeline-list">
+            <li>
+              Optimized AWS and DigitalOcean cloud infrastructure, improving
+              system uptime by 30%
+            </li>
+            <li>
+              Automated CI/CD pipelines using Docker and Git, reducing
+              deployment time by 45%
+            </li>
+          </ul>
           </div>
         </div>
 
@@ -290,6 +311,16 @@
               <div class="timeline-company">University College of Jaffna</div>
             </div>
             <div class="timeline-date">2023 - 2026</div>
+            <ul class="timeline-list">
+            <li>
+              Optimized AWS and DigitalOcean cloud infrastructure, improving
+              system uptime by 30%
+            </li>
+            <li>
+              Automated CI/CD pipelines using Docker and Git, reducing
+              deployment time by 45%
+            </li>
+          </ul>
           </div>
         </div>
       </div>
@@ -358,11 +389,69 @@
           <div class="skill-tag">PostgreSQL</div>
           <div class="skill-tag">CI/CD</div>
           <div class="skill-tag">Vue.js</div>
-          <div class="skill-tag">REST APIs</div>
+          <div class="skill-tag">Salesforce</div>
           <div class="skill-tag">Python</div>
           <div class="skill-tag">FastAPI</div>
           <div class="skill-tag">Linux</div>
         </div>
+      </div>
+
+      <!-- Contact Form Section -->
+      <div class="contact-form-wrapper" id="contact-form">
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="form-intro">
+          Have a project in mind? Fill out the form below and I'll get back to you as soon as possible.
+        </p>
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+          <input type="hidden" name="access_key" value="ab4447eb-ddf1-4cf2-aba5-a948459f8eb4">
+          
+          <div class="input-group">
+            <label for="name">
+              <i class="fas fa-user"></i>
+              Name
+            </label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              placeholder="Your full name" 
+              required
+            >
+          </div>
+          
+          <div class="input-group">
+            <label for="email">
+              <i class="fas fa-envelope"></i>
+              Email
+            </label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              placeholder="your.email@example.com" 
+              required
+            >
+          </div>
+          
+          <div class="input-group">
+            <label for="message">
+              <i class="fas fa-comment-dots"></i>
+              Message
+            </label>
+            <textarea 
+              id="message" 
+              name="message" 
+              rows="5" 
+              placeholder="Tell me about your project or inquiry..." 
+              required
+            ></textarea>
+          </div>
+          
+          <button type="submit" class="submit-btn">
+            <i class="fas fa-paper-plane"></i>
+            Send Message
+          </button>
+        </form>
       </div>
 
       <div class="contact">
@@ -393,6 +482,7 @@
         </div>
       </div>
     </div>
+    
     <!-- WhatsApp Floating Button -->
     <div class="wa-float" onclick="toggleWA()"><i class="fab fa-whatsapp"></i></div>
 
