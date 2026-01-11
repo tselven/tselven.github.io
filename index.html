@@ -114,19 +114,22 @@
               <i class="fas fa-envelope"></i>
             </a>
           </div>
-          
+
           <!-- CTA Buttons -->
           <div class="cta-buttons">
             <a href="#contact-form" class="cta-btn cta-primary">
               <i class="fas fa-briefcase"></i>
               Hire Me
             </a>
-            <a href="./THAMILSELVEN_CV.pdf" class="cta-btn cta-secondary" download>
+            <a
+              href="./THAMILSELVEN_CV.pdf"
+              class="cta-btn cta-secondary"
+              download
+            >
               <i class="fas fa-download"></i>
               Get Resume
             </a>
           </div>
-
         </div>
       </div>
 
@@ -292,15 +295,31 @@
             </div>
             <div class="timeline-date">2025 - Present</div>
             <ul class="timeline-list">
-            <li>
-              Optimized AWS and DigitalOcean cloud infrastructure, improving
-              system uptime by 30%
-            </li>
-            <li>
-              Automated CI/CD pipelines using Docker and Git, reducing
-              deployment time by 45%
-            </li>
-          </ul>
+              <li>
+                Studying software engineering principles including SDLC, system
+                analysis, and design methodologies.
+              </li>
+              <li>
+                Gaining exposure to enterprise-level application development and
+                scalable system architectures.
+              </li>
+              <li>
+                Learning object-oriented design, design patterns, and best
+                practices for maintainable code.
+              </li>
+              <li>
+                Developing problem-solving skills through algorithmic thinking
+                and structured programming.
+              </li>
+              <li>
+                Understanding databases, data modeling, and normalization
+                concepts.
+              </li>
+              <li>
+                Familiarizing with version control systems, documentation
+                standards, and collaborative development practices.
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -312,15 +331,35 @@
             </div>
             <div class="timeline-date">2023 - 2026</div>
             <ul class="timeline-list">
-            <li>
-              Optimized AWS and DigitalOcean cloud infrastructure, improving
-              system uptime by 30%
-            </li>
-            <li>
-              Automated CI/CD pipelines using Docker and Git, reducing
-              deployment time by 45%
-            </li>
-          </ul>
+              <li>
+                Learned core programming concepts using languages such as PHP,
+                Java, and Python.
+              </li>
+              <li>
+                Built web applications using HTML, CSS, JavaScript, and backend
+                frameworks.
+              </li>
+              <li>
+                Worked with relational databases including MySQL and SQL-based
+                data manipulation.
+              </li>
+              <li>
+                Gained hands-on experience in software development through
+                academic projects.
+              </li>
+              <li>
+                Learned fundamentals of networking, operating systems, and
+                computer architecture.
+              </li>
+              <li>
+                Applied basic software testing, debugging, and documentation
+                practices.
+              </li>
+              <li>
+                Collaborated in team-based assignments, improving communication
+                and project coordination skills.
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -400,53 +439,64 @@
       <div class="contact-form-wrapper" id="contact-form">
         <h2 class="section-title">Let's Work Together</h2>
         <p class="form-intro">
-          Have a project in mind? Fill out the form below and I'll get back to you as soon as possible.
+          Have a project in mind? Fill out the form below and I'll get back to
+          you as soon as possible.
         </p>
-        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-          <input type="hidden" name="access_key" value="ab4447eb-ddf1-4cf2-aba5-a948459f8eb4">
+        <form
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          class="contact-form"
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="ab4447eb-ddf1-4cf2-aba5-a948459f8eb4"
+          />
           
           <div class="input-group">
             <label for="name">
               <i class="fas fa-user"></i>
               Name
             </label>
-            <input 
-              type="text" 
-              id="name" 
-              name="name" 
-              placeholder="Your full name" 
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your full name"
               required
-            >
+            />
           </div>
-          
+
           <div class="input-group">
             <label for="email">
               <i class="fas fa-envelope"></i>
               Email
             </label>
-            <input 
-              type="email" 
-              id="email" 
-              name="email" 
-              placeholder="your.email@example.com" 
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="your.email@example.com"
               required
-            >
+            />
           </div>
-          
+
           <div class="input-group">
             <label for="message">
               <i class="fas fa-comment-dots"></i>
               Message
             </label>
-            <textarea 
-              id="message" 
-              name="message" 
-              rows="5" 
-              placeholder="Tell me about your project or inquiry..." 
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Tell me about your project or inquiry..."
               required
             ></textarea>
           </div>
-          
+
+          <div class="h-captcha" data-captcha="true"></div>
+
           <button type="submit" class="submit-btn">
             <i class="fas fa-paper-plane"></i>
             Send Message
@@ -482,9 +532,11 @@
         </div>
       </div>
     </div>
-    
+
     <!-- WhatsApp Floating Button -->
-    <div class="wa-float" onclick="toggleWA()"><i class="fab fa-whatsapp"></i></div>
+    <div class="wa-float" onclick="toggleWA()">
+      <i class="fab fa-whatsapp"></i>
+    </div>
 
     <!-- Popup -->
     <div class="wa-popup" id="waPopup">
@@ -504,5 +556,21 @@
       </div>
     </div>
     <script src="script.js"></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <script>
+      const form = document.getElementById("contact-form");
+
+      form.addEventListener("submit", function (e) {
+        const hCaptcha = form.querySelector(
+          "textarea[name=h-captcha-response]"
+        ).value;
+
+        if (!hCaptcha) {
+          e.preventDefault();
+          alert("Please fill out captcha field");
+          return;
+        }
+      });
+    </script>
   </body>
 </html>
