@@ -28,67 +28,17 @@
             --gradient-4: #6c5ce7;
         }
 
-        [data-theme="dark"] {
-            --bg-primary: #0a0e27;
-            --bg-secondary: #1a1f3a;
-            --accent: #00d9ff;
-            --accent-glow: rgba(0, 217, 255, 0.3);
-            --text-primary: #ffffff;
-            --text-secondary: #a0a0b0;
-            --card-bg: rgba(26, 31, 58, 0.8);
-            --border: rgba(0, 217, 255, 0.2);
-            --gradient-1: #00d9ff;
-            --gradient-2: #6366f1;
-            --gradient-3: #ec4899;
-            --gradient-4: #8b5cf6;
-        }
-
         body {
             font-family: 'Outfit', sans-serif;
             background: var(--bg-primary);
             color: var(--text-primary);
             min-height: 100vh;
             display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            padding: 40px 20px;
-            position: relative;
-            overflow-x: hidden;
-            transition: background 0.3s ease, color 0.3s ease;
-        }
-
-        /* Theme Switcher */
-        .theme-toggle {
-            position: fixed;
-            top: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: var(--card-bg);
-            border: 2px solid var(--border);
-            display: flex;
             align-items: center;
             justify-content: center;
-            cursor: pointer;
-            z-index: 1000;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-        }
-
-        .theme-toggle:hover {
-            transform: scale(1.1) rotate(180deg);
-            box-shadow: 0 8px 30px var(--accent-glow);
-        }
-
-        .theme-toggle i {
-            font-size: 24px;
-            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            transition: transform 0.3s ease;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
         }
 
         /* Animated Background */
@@ -165,7 +115,6 @@
             padding: 48px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(255, 107, 53, 0.2);
             animation: slideUp 0.8s ease-out;
-            transition: background 0.3s ease, box-shadow 0.3s ease;
         }
 
         .card::before {
@@ -222,27 +171,11 @@
             object-fit: cover;
             box-shadow: 0 10px 40px rgba(255, 107, 53, 0.3);
             animation: floatProfile 3s ease-in-out infinite;
-        }
-
-        .profile-img-container {
-            width: 180px;
-            height: 180px;
-            border-radius: 20px;
-            border: 4px solid transparent;
-            background: linear-gradient(var(--bg-secondary), var(--bg-secondary)) padding-box,
-                        linear-gradient(135deg, var(--gradient-1), var(--gradient-2), var(--gradient-3)) border-box;
-            box-shadow: 0 10px 40px rgba(255, 107, 53, 0.3);
-            animation: floatProfile 3s ease-in-out infinite;
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .profile-placeholder {
             font-size: 72px;
-            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+            background-image: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -527,187 +460,6 @@
             box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
         }
 
-        /* Experience & Education Timeline */
-        .timeline {
-            margin-bottom: 32px;
-            animation: fadeIn 1s ease-out 0.6s backwards;
-        }
-
-        .timeline-item {
-            position: relative;
-            padding-left: 32px;
-            margin-bottom: 28px;
-            padding-bottom: 20px;
-            border-left: 2px solid var(--border);
-        }
-
-        .timeline-item:last-child {
-            border-left: 2px solid transparent;
-            margin-bottom: 0;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -7px;
-            top: 0;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
-            box-shadow: 0 0 15px var(--accent-glow);
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-        }
-
-        .timeline-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 8px;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .timeline-title {
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--text-primary);
-            line-height: 1.3;
-        }
-
-        .timeline-company {
-            font-size: 16px;
-            color: var(--accent);
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-
-        .timeline-date {
-            font-size: 13px;
-            color: var(--text-secondary);
-            font-family: 'JetBrains Mono', monospace;
-            background: var(--bg-secondary);
-            padding: 4px 12px;
-            border-radius: 20px;
-            border: 1px solid var(--border);
-        }
-
-        .timeline-description {
-            color: var(--text-secondary);
-            line-height: 1.7;
-            font-size: 14px;
-            margin-bottom: 8px;
-        }
-
-        .timeline-list {
-            list-style: none;
-            padding: 0;
-            margin-top: 12px;
-        }
-
-        .timeline-list li {
-            position: relative;
-            padding-left: 20px;
-            margin-bottom: 8px;
-            color: var(--text-secondary);
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        .timeline-list li::before {
-            content: '▹';
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-            font-weight: bold;
-        }
-
-        /* Publications */
-        .publication-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            padding: 20px;
-            border-radius: 16px;
-            margin-bottom: 16px;
-            transition: all 0.3s ease;
-        }
-
-        .publication-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px var(--accent-glow);
-        }
-
-        .publication-title {
-            font-size: 16px;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 8px;
-            line-height: 1.4;
-        }
-
-        .publication-venue {
-            font-size: 14px;
-            color: var(--accent);
-            font-style: italic;
-            margin-bottom: 4px;
-        }
-
-        .publication-location {
-            font-size: 13px;
-            color: var(--text-secondary);
-        }
-
-        /* Certifications */
-        .cert-grid {
-            display: grid;
-            gap: 12px;
-            margin-top: 12px;
-        }
-
-        .cert-item {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            padding: 16px 20px;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .cert-item:hover {
-            border-color: var(--accent);
-            transform: translateX(5px);
-            box-shadow: 0 5px 20px var(--accent-glow);
-        }
-
-        .cert-icon {
-            font-size: 24px;
-            color: var(--accent);
-        }
-
-        .cert-content {
-            flex: 1;
-        }
-
-        .cert-name {
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 4px;
-        }
-
-        .cert-issuer {
-            font-size: 13px;
-            color: var(--text-secondary);
-        }
-
         /* Floating Particles */
         .particle {
             position: fixed;
@@ -737,21 +489,6 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            body {
-                padding: 100px 20px 40px;
-            }
-
-            .theme-toggle {
-                top: 20px;
-                right: 20px;
-                width: 50px;
-                height: 50px;
-            }
-
-            .theme-toggle i {
-                font-size: 20px;
-            }
-
             .card {
                 padding: 32px 24px;
             }
@@ -766,14 +503,9 @@
                 font-size: 32px;
             }
 
-            .profile-img,
-            .profile-img-container {
+            .profile-img {
                 width: 140px;
                 height: 140px;
-            }
-
-            .profile-placeholder {
-                font-size: 56px;
             }
 
             .social-links {
@@ -784,28 +516,10 @@
                 border-right: none;
                 white-space: normal;
             }
-
-            .timeline-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .timeline-date {
-                align-self: flex-start;
-            }
-
-            .skills-grid {
-                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            }
         }
     </style>
 </head>
 <body>
-    <!-- Theme Toggle -->
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-        <i class="fas fa-moon" id="themeIcon"></i>
-    </button>
-
     <!-- Animated Background -->
     <div class="bg-animation">
         <div class="floating-shape shape-1"></div>
@@ -818,11 +532,8 @@
     <div class="card">
         <!-- Header -->
         <div class="header">
-            <div class="profile-img-container">
-                <!-- Replace 'your-photo.jpg' with your actual image path -->
-                <img src="./tselven.jpg" alt="Poologarasa Thamilselven" class="profile-img" 
-                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                <i class="fas fa-user profile-placeholder" style="display:none;"></i>
+            <div class="profile-img">
+                <i class="fas fa-user"></i>
             </div>
             <div class="header-content">
                 <h1 class="name">Poologarasa <span class="name-highlight">Thamilselven</span></h1>
@@ -882,100 +593,6 @@
             </div>
         </div>
 
-        <!-- Experience -->
-        <div class="timeline">
-            <h2 class="section-title">Professional Experience</h2>
-            
-            <div class="timeline-item">
-                <div class="timeline-header">
-                    <div>
-                        <div class="timeline-title">Software Engineer L2</div>
-                        <div class="timeline-company">Jyothi's ICT Zone Pvt Ltd</div>
-                    </div>
-                    <div class="timeline-date">Jun 2025 - Present</div>
-                </div>
-                <ul class="timeline-list">
-                    <li>Optimized AWS and DigitalOcean cloud infrastructure, improving system uptime by 30%</li>
-                    <li>Automated CI/CD pipelines using Docker and Git, reducing deployment time by 45%</li>
-                    <li>Designed and implemented RESTful APIs using Node.js and MongoDB, supporting 5k+ monthly users</li>
-                    <li>Improved application performance through database indexing and API optimization, reducing response latency by 25%</li>
-                </ul>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-header">
-                    <div>
-                        <div class="timeline-title">Intern Web Developer</div>
-                        <div class="timeline-company">WebBuilders.lk</div>
-                    </div>
-                    <div class="timeline-date">Jul 2024 - Jan 2025</div>
-                </div>
-                <ul class="timeline-list">
-                    <li>Developed Laravel-based backend services, reducing manual business operations by 40%</li>
-                    <li>Built Vue.js user interfaces integrated with REST APIs, improving user engagement by 20%</li>
-                    <li>Extended e-commerce systems with booking and reservation features used by 3+ client projects</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Education -->
-        <div class="timeline">
-            <h2 class="section-title">Education</h2>
-            
-            <div class="timeline-item">
-                <div class="timeline-header">
-                    <div>
-                        <div class="timeline-title">Bachelor of Information Technology (External)</div>
-                        <div class="timeline-company">University of Colombo School of Computing</div>
-                    </div>
-                    <div class="timeline-date">2025 - Present</div>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-header">
-                    <div>
-                        <div class="timeline-title">Higher National Diploma in IT</div>
-                        <div class="timeline-company">University College of Jaffna</div>
-                    </div>
-                    <div class="timeline-date">2023 - 2026</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Certifications -->
-        <div class="timeline">
-            <h2 class="section-title">Certifications</h2>
-            <div class="cert-grid">
-                <div class="cert-item">
-                    <div class="cert-icon"><i class="fab fa-python"></i></div>
-                    <div class="cert-content">
-                        <div class="cert-name">Python for Beginners</div>
-                        <div class="cert-issuer">University of Moratuwa (2024)</div>
-                    </div>
-                </div>
-                <div class="cert-item">
-                    <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
-                    <div class="cert-content">
-                        <div class="cert-name">Foundations of Cybersecurity</div>
-                        <div class="cert-issuer">Google (2024)</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Publications -->
-        <div class="timeline">
-            <h2 class="section-title">Research Publications</h2>
-            <div class="publication-card">
-                <div class="publication-title">
-                    Web-Based Face Recognition Attendance System using Laravel, FastAPI, and Vector Databases
-                </div>
-                <div class="publication-venue">International Research Symposium (IRS 2025)</div>
-                <div class="publication-location">Sri Lanka</div>
-            </div>
-        </div>
-
         <!-- Skills -->
         <div class="skills">
             <h2 class="section-title">Tech Stack</h2>
@@ -1023,33 +640,6 @@
 
     <!-- Floating Particles -->
     <script>
-        // Theme Switcher
-        const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = document.getElementById('themeIcon');
-        const htmlElement = document.documentElement;
-
-        // Check for saved theme preference or default to 'light'
-        const currentTheme = localStorage.getItem('theme') || 'light';
-        htmlElement.setAttribute('data-theme', currentTheme);
-        updateThemeIcon(currentTheme);
-
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = htmlElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            
-            htmlElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            updateThemeIcon(newTheme);
-        });
-
-        function updateThemeIcon(theme) {
-            if (theme === 'dark') {
-                themeIcon.className = 'fas fa-sun';
-            } else {
-                themeIcon.className = 'fas fa-moon';
-            }
-        }
-
         // Create floating particles
         for (let i = 0; i < 15; i++) {
             const particle = document.createElement('div');
@@ -1059,6 +649,26 @@
             particle.style.animationDuration = (Math.random() * 5 + 6) + 's';
             document.body.appendChild(particle);
         }
+
+        // Add hover effect to card
+        const card = document.querySelector('.card');
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 50;
+            const rotateY = (centerX - x) / 50;
+            
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
+        });
     </script>
 </body>
 </html>
