@@ -1,0 +1,36 @@
+[
+    {
+        "title": "Face Recognition Attendance System",
+        "description": "Web-based attendance system using facial recognition with Laravel, FastAPI, and vector databases for real-time tracking.",
+        "icon": "fas fa-user-check",
+        "tags": ["Laravel", "FastAPI", "Python", "Vector DB"],
+        "category": "AI",
+        "github": "https://github.com/yourusername/project"
+    },
+    {
+        "title": "Trip Planner App",
+        "description": "Its a trip planning mobile application that helps users to plan their trips efficiently by providing recommendations for destinations, accommodations, and activities based on user preferences.",
+        "icon": "fas fa-map",
+        "tags": ["Node.Js", "React Native", "Next.JS", "MongoDB"],
+        "category": "Mobile",
+        "github": "https://github.com/solo-trips-org/solo-trips"
+    },
+    {
+        "title": "Api Craft",
+        "description": "Its a backend development framework for Nodejs + MongoDB to build scalable and maintainable APIs quickly with built-in features like authentication, validation, and error handling.",
+        "icon": "fas fa-gear",
+        "tags": ["Node.Js", "Mongoose", "Framework","API"],
+        "category": "Framework",
+        "github": "https://github.com/api-craft/api-craft",
+        "demo":"https://www.npmjs.com/package/@tselven/api-craft"
+    },
+    {
+        "title": "Zen Framework",
+        "description": "Zen is a PHP Framework for develop APIs and Web Applications.",
+        "icon": "fas fa-rocket",
+        "tags": ["PHP","Framework","API"],
+        "category": "Framework",
+        "github": "https://github.com/tselven/zen",
+        "demo":"https://packagist.org/packages/tselven/zen"
+    }
+]

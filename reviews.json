@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Subashini Pathmanathan",
+        "position": "Student",
+        "content": "I was really impressed with the CV writing service I used. The writer took the time to understand my background and tailored my CV to highlight my skills effectively. Within a week of using my new CV, I landed several interviews! Highly recommend.",
+        "platform": "google",
+        "rating": 5,
+        "avatar": "SP"
+    },
+    {
+        "name": "Jegatheesan Jeyaruban",
+        "position": "Software Engineer L3 at Jyothis ICT Zone PVT LTD",
+        "content": "I’ve had the pleasure of working with this backend developer, and I can confidently say he is highly skilled and dependable. He has strong expertise in Node.js, NestJS, Python, Go, and backend system design. He is also very knowledgeable in AWS services and deployment processes, ensuring scalable and secure applications. His problem-solving ability and clean coding practices make him a valuable asset to any development team.I highly recommend him to any organization looking for a reliable and talented Backend Developer.",
+        "platform": "linkedin",
+        "rating": 5,
+        "avatar": "SJ"
+    },
+    {
+        "name": "Kishana Yogathasan",
+        "position": "UI/UX Designer at Jyothis ICT Zone PVT LTD",
+        "content": "I’ve had the pleasure of working closely with this backend developer as a UI/UX designer, and I can confidently say he is highly skilled, dependable, and an excellent team lead. His strong expertise in backend technologies and system design played a crucial role in shaping the final product.Many of the designs were implemented efficiently and accurately thanks to his deep technical knowledge and clear understanding of design logic. He consistently provided valuable inputs that helped refine and improve the overall user experience, ensuring that the designs were not only visually appealing but also technically feasible.He is also very knowledgeable in AWS services and deployment processes, ensuring scalable and secure applications. His problem-solving mindset, collaboration skills, and clean coding practices make him a valuable asset to any development team.I highly recommend him to any organization looking for a reliable and talented Backend Developer and team lead.",
+        "platform": "linkedin",
+        "rating": 5,
+        "avatar": "SJ"
+    }
+]

@@ -1,1275 +1,418 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <!-- Primary Meta Tags -->
-    <title>Poologarasa Thamilselven | Software Engineer - Backend & DevOps Specialist</title>
-    <meta name="title" content="Poologarasa Thamilselven | Software Engineer - Backend & DevOps">
-    <meta name="description" content="Software Engineer with 1+ years of experience in backend development, DevOps, and cloud infrastructure. Specialized in REST APIs, Docker, AWS, Node.js, and Laravel. Currently at Jyothi's ICT Zone.">
-    <meta name="keywords" content="Thamilselven, Software Engineer, Backend Developer, DevOps Engineer, Node.js, Laravel, Docker, AWS, REST API, Sri Lanka, Full Stack Developer">
-    <meta name="author" content="Poologarasa Thamilselven">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://tselven.com/">
-    <meta property="og:title" content="Poologarasa Thamilselven | Software Engineer - Backend & DevOps">
-    <meta property="og:description" content="Software Engineer specializing in scalable REST APIs, containerized systems, and cloud infrastructure. Expert in Node.js, Laravel, Docker, and AWS.">
-    <meta property="og:image" content="https://tselven.com/your-photo.jpg">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://tselven.com/">
-    <meta property="twitter:title" content="Poologarasa Thamilselven | Software Engineer">
-    <meta property="twitter:description" content="Software Engineer specializing in backend development and DevOps. Building scalable systems with Node.js, Laravel, Docker & AWS.">
-    <meta property="twitter:image" content="https://tselven.com/your-photo.jpg">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://tselven.com/">
-    
-    <!-- Schema.org structured data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Poologarasa Thamilselven",
-      "url": "https://tselven.com",
-      "image": "https://tselven.com/your-photo.jpg",
-      "jobTitle": "Software Engineer",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Jyothi's ICT Zone Pvt Ltd"
-      },
-      "alumniOf": [
-        {
-          "@type": "EducationalOrganization",
-          "name": "University of Colombo School of Computing"
-        },
-        {
-          "@type": "EducationalOrganization",
-          "name": "University College of Jaffna"
-        }
-      ],
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "LK",
-        "addressRegion": "Sri Lanka"
-      },
-      "email": "contact@tselven.com",
-      "sameAs": [
-        "https://linkedin.com/in/thamilselven",
-        "https://github.com/tselven",
-        "https://youtube.com/@tselven",
-        "https://web.facebook.com/thamil.selven.129"
-      ],
-      "knowsAbout": ["Backend Development", "DevOps", "Node.js", "Laravel", "Docker", "AWS", "REST API", "MongoDB", "PostgreSQL", "CI/CD"]
-    }
-    </script>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --bg-primary: #f0f4ff;
-            --bg-secondary: #ffffff;
-            --accent: #ff6b35;
-            --accent-glow: rgba(255, 107, 53, 0.3);
-            --text-primary: #1a1a2e;
-            --text-secondary: #5a5a6e;
-            --card-bg: rgba(255, 255, 255, 0.95);
-            --border: rgba(255, 107, 53, 0.2);
-            --gradient-1: #ff6b35;
-            --gradient-2: #f7931e;
-            --gradient-3: #4ecdc4;
-            --gradient-4: #6c5ce7;
-        }
-
-        [data-theme="dark"] {
-            --bg-primary: #0a0e27;
-            --bg-secondary: #1a1f3a;
-            --accent: #00d9ff;
-            --accent-glow: rgba(0, 217, 255, 0.3);
-            --text-primary: #ffffff;
-            --text-secondary: #a0a0b0;
-            --card-bg: rgba(26, 31, 58, 0.8);
-            --border: rgba(0, 217, 255, 0.2);
-            --gradient-1: #00d9ff;
-            --gradient-2: #6366f1;
-            --gradient-3: #ec4899;
-            --gradient-4: #8b5cf6;
-        }
-
-        body {
-            font-family: 'Outfit', sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            min-height: 100vh;
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            padding: 40px 20px;
-            position: relative;
-            overflow-x: hidden;
-            transition: background 0.3s ease, color 0.3s ease;
-        }
-
-        /* Theme Switcher */
-        .theme-toggle {
-            position: fixed;
-            top: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: var(--card-bg);
-            border: 2px solid var(--border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 1000;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-        }
-
-        .theme-toggle:hover {
-            transform: scale(1.1) rotate(180deg);
-            box-shadow: 0 8px 30px var(--accent-glow);
-        }
-
-        .theme-toggle i {
-            font-size: 24px;
-            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            transition: transform 0.3s ease;
-        }
-
-        /* Animated Background */
-        .bg-animation {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            opacity: 0.4;
-        }
-
-        .floating-shape {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            animation: float 20s infinite ease-in-out;
-        }
-
-        .shape-1 {
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, var(--gradient-1) 0%, transparent 70%);
-            top: -15%;
-            left: -15%;
-            animation-delay: 0s;
-        }
-
-        .shape-2 {
-            width: 450px;
-            height: 450px;
-            background: radial-gradient(circle, var(--gradient-4) 0%, transparent 70%);
-            bottom: -20%;
-            right: -15%;
-            animation-delay: 7s;
-        }
-
-        .shape-3 {
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, var(--gradient-3) 0%, transparent 70%);
-            top: 40%;
-            right: 5%;
-            animation-delay: 14s;
-        }
-
-        .shape-4 {
-            width: 350px;
-            height: 350px;
-            background: radial-gradient(circle, var(--gradient-2) 0%, transparent 70%);
-            top: 20%;
-            left: 30%;
-            animation-delay: 3s;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            33% { transform: translate(100px, -50px) scale(1.1); }
-            66% { transform: translate(-50px, 100px) scale(0.9); }
-        }
-
-        /* Card Container */
-        .card {
-            position: relative;
-            z-index: 1;
-            max-width: 900px;
-            width: 100%;
-            background: var(--card-bg);
-            backdrop-filter: blur(20px);
-            border: 2px solid transparent;
-            background-clip: padding-box;
-            border-radius: 24px;
-            padding: 48px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(255, 107, 53, 0.2);
-            animation: slideUp 0.8s ease-out;
-            transition: background 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: 24px;
-            padding: 2px;
-            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2), var(--gradient-3), var(--gradient-4));
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            pointer-events: none;
-            animation: rotateGradient 8s linear infinite;
-        }
-
-        @keyframes rotateGradient {
-            0% { filter: hue-rotate(0deg); }
-            100% { filter: hue-rotate(360deg); }
-        }
-
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Header Section */
-        .header {
-            display: flex;
-            gap: 32px;
-            margin-bottom: 40px;
-            align-items: flex-start;
-            animation: fadeIn 1s ease-out 0.2s backwards;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .profile-img {
-            width: 100%;
-            height: 100%;
-            border-radius: 16px;
-            object-fit: cover;
-        }
-
-        .profile-img-container {
-            width: 180px;
-            height: 180px;
-            border-radius: 20px;
-            border: 4px solid transparent;
-            background: linear-gradient(var(--bg-secondary), var(--bg-secondary)) padding-box,
-                        linear-gradient(135deg, var(--gradient-1), var(--gradient-2), var(--gradient-3)) border-box;
-            box-shadow: 0 10px 40px rgba(255, 107, 53, 0.3);
-            animation: floatProfile 3s ease-in-out infinite;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            position: relative;
-            flex-shrink: 0;
-        }
-
-        .profile-placeholder {
-            font-size: 72px;
-            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        @keyframes floatProfile {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .header-content {
-            flex: 1;
-        }
-
-        .name {
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 8px;
-            line-height: 1.2;
-        }
-
-        .name-highlight {
-            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            position: relative;
-            display: inline-block;
-        }
-
-        .name-highlight::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, var(--gradient-1), var(--gradient-2));
-            animation: underlineExpand 1s ease-out 0.5s backwards;
-        }
-
-        @keyframes underlineExpand {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-
-        .title {
-            font-size: 18px;
-            color: var(--text-secondary);
-            font-family: 'JetBrains Mono', monospace;
-            margin-bottom: 16px;
-            animation: typewriter 2s steps(40) 0.8s backwards;
-            overflow: hidden;
-            white-space: nowrap;
-            border-right: 2px solid var(--accent);
-            width: fit-content;
-        }
-
-        @keyframes typewriter {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-
-        .location {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--text-secondary);
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
-
-        /* Social Links */
-        .social-links {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .social-btn {
-            width: 44px;
-            height: 44px;
-            border-radius: 12px;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            color: var(--text-primary);
-            font-size: 18px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .social-btn::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
-            transition: all 0.5s ease;
-            transform: translate(-50%, -50%);
-            z-index: -1;
-        }
-
-        .social-btn:hover {
-            color: white;
-            border-color: var(--accent);
-            transform: translateY(-3px) rotate(5deg);
-            box-shadow: 0 8px 25px var(--accent-glow);
-        }
-
-        .social-btn:hover::before {
-            width: 200%;
-            height: 200%;
-        }
-
-        .social-btn i {
-            position: relative;
-            z-index: 1;
-        }
-
-        /* About Section */
-        .about {
-            margin-bottom: 32px;
-            animation: fadeIn 1s ease-out 0.4s backwards;
-        }
-
-        .section-title {
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 12px;
-            font-weight: 700;
-        }
-
-        .about-text {
-            color: var(--text-secondary);
-            line-height: 1.7;
-            font-size: 15px;
-        }
-
-        /* Skills Section */
-        .skills {
-            margin-bottom: 32px;
-            animation: fadeIn 1s ease-out 0.6s backwards;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 12px;
-        }
-
-        .skill-tag {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            padding: 10px 16px;
-            border-radius: 12px;
-            font-size: 13px;
-            font-family: 'JetBrains Mono', monospace;
-            text-align: center;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .skill-tag::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.2), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .skill-tag:hover {
-            border-color: var(--accent);
-            transform: translateY(-2px) scale(1.05);
-            box-shadow: 0 8px 20px var(--accent-glow);
-            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(247, 147, 30, 0.1));
-        }
-
-        .skill-tag:hover::before {
-            left: 100%;
-        }
-
-        /* Stats Section */
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 16px;
-            margin-bottom: 32px;
-            animation: fadeIn 1s ease-out 0.8s backwards;
-        }
-
-        .stat-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            padding: 20px;
-            border-radius: 16px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .stat-card:hover {
-            border-color: var(--accent);
-            transform: scale(1.08) rotate(2deg);
-            box-shadow: 0 15px 40px var(--accent-glow);
-        }
-
-        .stat-number {
-            font-size: 32px;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 4px;
-        }
-
-        .stat-label {
-            font-size: 12px;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Services Section */
-        .services {
-            margin-bottom: 32px;
-            animation: fadeIn 1s ease-out 0.9s backwards;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-        }
-
-        .service-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            padding: 16px;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 0;
-        }
-
-        .service-card:hover::before {
-            opacity: 0.05;
-        }
-
-        .service-card:hover {
-            border-color: var(--accent);
-            transform: translateX(5px);
-            box-shadow: 0 8px 25px var(--accent-glow);
-        }
-
-        .service-icon {
-            width: 44px;
-            height: 44px;
-            flex-shrink: 0;
-            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            color: white;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px var(--accent-glow);
-            position: relative;
-            z-index: 1;
-        }
-
-        .service-card:hover .service-icon {
-            transform: scale(1.1) rotate(5deg);
-        }
-
-        .service-content {
-            flex: 1;
-            position: relative;
-            z-index: 1;
-        }
-
-        .service-title {
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 2px;
-            line-height: 1.3;
-        }
-
-        .service-description {
-            font-size: 12px;
-            color: var(--text-secondary);
-            line-height: 1.4;
-        }
-
-        /* Contact Section */
-        .contact {
-            animation: fadeIn 1s ease-out 1s backwards;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 12px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 14px 18px;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            text-decoration: none;
-            color: var(--text-primary);
-            transition: all 0.3s ease;
-            font-size: 14px;
-        }
-
-        .contact-item:hover {
-            border-color: var(--accent);
-            transform: translateX(8px) scale(1.02);
-            box-shadow: 0 8px 30px var(--accent-glow);
-        }
-
-        .contact-icon {
-            width: 36px;
-            height: 36px;
-            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 16px;
-            flex-shrink: 0;
-            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
-        }
-
-        /* Experience & Education Timeline */
-        .timeline {
-            margin-bottom: 32px;
-            animation: fadeIn 1s ease-out 0.6s backwards;
-        }
-
-        .timeline-item {
-            position: relative;
-            padding-left: 32px;
-            margin-bottom: 28px;
-            padding-bottom: 20px;
-            border-left: 2px solid var(--border);
-        }
-
-        .timeline-item:last-child {
-            border-left: 2px solid transparent;
-            margin-bottom: 0;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -7px;
-            top: 0;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
-            box-shadow: 0 0 15px var(--accent-glow);
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-        }
-
-        .timeline-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 8px;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .timeline-title {
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--text-primary);
-            line-height: 1.3;
-        }
-
-        .timeline-company {
-            font-size: 16px;
-            color: var(--accent);
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-
-        .timeline-date {
-            font-size: 13px;
-            color: var(--text-secondary);
-            font-family: 'JetBrains Mono', monospace;
-            background: var(--bg-secondary);
-            padding: 4px 12px;
-            border-radius: 20px;
-            border: 1px solid var(--border);
-        }
-
-        .timeline-description {
-            color: var(--text-secondary);
-            line-height: 1.7;
-            font-size: 14px;
-            margin-bottom: 8px;
-        }
-
-        .timeline-list {
-            list-style: none;
-            padding: 0;
-            margin-top: 12px;
-        }
-
-        .timeline-list li {
-            position: relative;
-            padding-left: 20px;
-            margin-bottom: 8px;
-            color: var(--text-secondary);
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        .timeline-list li::before {
-            content: '▹';
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-            font-weight: bold;
-        }
-
-        /* Publications */
-        .publication-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            padding: 20px;
-            border-radius: 16px;
-            margin-bottom: 16px;
-            transition: all 0.3s ease;
-        }
-
-        .publication-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px var(--accent-glow);
-        }
-
-        .publication-title {
-            font-size: 16px;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 8px;
-            line-height: 1.4;
-        }
-
-        .publication-venue {
-            font-size: 14px;
-            color: var(--accent);
-            font-style: italic;
-            margin-bottom: 4px;
-        }
-
-        .publication-location {
-            font-size: 13px;
-            color: var(--text-secondary);
-        }
-
-        /* Certifications */
-        .cert-grid {
-            display: grid;
-            gap: 12px;
-            margin-top: 12px;
-        }
-
-        .cert-item {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            padding: 16px 20px;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .cert-item:hover {
-            border-color: var(--accent);
-            transform: translateX(5px);
-            box-shadow: 0 5px 20px var(--accent-glow);
-        }
-
-        .cert-icon {
-            font-size: 24px;
-            color: var(--accent);
-        }
-
-        .cert-content {
-            flex: 1;
-        }
-
-        .cert-name {
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 4px;
-        }
-
-        .cert-issuer {
-            font-size: 13px;
-            color: var(--text-secondary);
-        }
-
-        /* Floating Particles */
-        .particle {
-            position: fixed;
-            width: 6px;
-            height: 6px;
-            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-3));
-            border-radius: 50%;
-            pointer-events: none;
-            animation: rise 8s infinite ease-in;
-            opacity: 0;
-            box-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
-        }
-
-        @keyframes rise {
-            0% {
-                transform: translateY(100vh) scale(0);
-                opacity: 0;
-            }
-            50% {
-                opacity: 0.5;
-            }
-            100% {
-                transform: translateY(-100vh) scale(1);
-                opacity: 0;
-            }
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            body {
-                padding: 100px 20px 40px;
-            }
-
-            .theme-toggle {
-                top: 20px;
-                right: 20px;
-                width: 50px;
-                height: 50px;
-            }
-
-            .theme-toggle i {
-                font-size: 20px;
-            }
-
-            .card {
-                padding: 32px 24px;
-            }
-
-            .header {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .location {
-                justify-content: center;
-            }
-
-            .name {
-                font-size: 32px;
-            }
-
-            .profile-img,
-            .profile-img-container {
-                width: 140px;
-                height: 140px;
-            }
-
-            .profile-placeholder {
-                font-size: 56px;
-            }
-
-            .social-links {
-                justify-content: center;
-            }
-
-            .title {
-                border-right: none;
-                white-space: normal;
-            }
-
-            .timeline-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .timeline-date {
-                align-self: flex-start;
-            }
-
-            .skills-grid {
-                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Theme Toggle -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>
+      Poologarasa Thamilselven | Software Engineer - Backend & DevOps Specialist
+    </title>
+    <meta
+      name="title"
+      content="Poologarasa Thamilselven | Software Engineer - Backend & DevOps"
+    />
+    <meta
+      name="description"
+      content="Software Engineer with 1+ years of experience in backend development, DevOps, and cloud infrastructure. Specialized in REST APIs, Docker, AWS, Node.js, and Laravel."
+    />
+    <meta
+      name="keywords"
+      content="Thamilselven, Software Engineer, Backend Developer, DevOps Engineer, Node.js, Laravel, Docker, AWS, REST API, Sri Lanka"
+    />
+    <meta name="author" content="Poologarasa Thamilselven" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- <link rel="canonical" href="https://tselven.com/"> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-        <i class="fas fa-moon" id="themeIcon"></i>
+      <i class="fas fa-moon" id="themeIcon"></i>
     </button>
 
-    <!-- Animated Background -->
     <div class="bg-animation">
-        <div class="floating-shape shape-1"></div>
-        <div class="floating-shape shape-2"></div>
-        <div class="floating-shape shape-3"></div>
-        <div class="floating-shape shape-4"></div>
+      <div class="floating-shape shape-1"></div>
+      <div class="floating-shape shape-2"></div>
+      <div class="floating-shape shape-3"></div>
+      <div class="floating-shape shape-4"></div>
     </div>
 
-    <!-- Main Card -->
     <div class="card">
-        <!-- Header -->
-        <div class="header">
-            <div class="profile-img-container">
-                <!-- Replace 'your-photo.jpg' with your actual image path -->
-                <img src="./thamilselven.jpg" alt="Poologarasa Thamilselven" class="profile-img" 
-                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-                <i class="fas fa-user profile-placeholder" style="display:none;"></i>
+      <div class="header">
+        <div class="profile-img-container">
+          <img
+            src="./thamilselven.jpg"
+            alt="Poologarasa Thamilselven"
+            class="profile-img"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+          />
+          <i class="fas fa-user profile-placeholder" style="display: none"></i>
+        </div>
+        <div class="header-content">
+          <h1 class="name">
+            Poologarasa <span class="name-highlight">Thamilselven</span>
+          </h1>
+          <p class="title">Software Engineer | Backend & DevOps</p>
+          <div class="location">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Sri Lanka</span>
+          </div>
+          <div class="social-links">
+            <a
+              href="https://linkedin.com/in/thamilselven"
+              class="social-btn"
+              target="_blank"
+              title="LinkedIn"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://github.com/tselven"
+              class="social-btn"
+              target="_blank"
+              title="GitHub"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://web.facebook.com/thamil.selven.129"
+              class="social-btn"
+              target="_blank"
+              title="Facebook"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://youtube.com/@tselven"
+              class="social-btn"
+              target="_blank"
+              title="YouTube"
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a
+              href="https://wa.me/94753271665"
+              class="social-btn"
+              target="_blank"
+              title="WhatsApp"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a
+              href="mailto:contact@tselven.com"
+              class="social-btn"
+              title="Email"
+            >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="about">
+        <h2 class="section-title">About</h2>
+        <p class="about-text">
+          Software Engineer with 1+ years of experience specializing in scalable
+          REST APIs, containerized systems, and SaaS platforms. Proven track
+          record of optimizing cloud infrastructure (AWS, DigitalOcean) and
+          automating CI/CD pipelines. Currently pursuing Bachelor's in IT at
+          University of Colombo while working full-time at Jyothi's ICT Zone.
+        </p>
+      </div>
+
+      <div class="stats">
+        <div class="stat-card">
+          <div class="stat-number">1+</div>
+          <div class="stat-label">Experience (Years)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">6+</div>
+          <div class="stat-label">Mentored Persons</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">5+</div>
+          <div class="stat-label">Projects Delivered</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">3+</div>
+          <div class="stat-label">Startups Helped</div>
+        </div>
+      </div>
+
+      <div class="services">
+        <h2 class="section-title">Services</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-file-alt"></i>
             </div>
-            <div class="header-content">
-                <h1 class="name">Poologarasa <span class="name-highlight">Thamilselven</span></h1>
-                <p class="title">Software Engineer | Backend & DevOps</p>
-                <div class="location">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Sri Lanka</span>
-                </div>
-                <div class="social-links">
-                    <a href="https://linkedin.com/in/thamilselven" class="social-btn" target="_blank" title="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/tselven" class="social-btn" target="_blank" title="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://web.facebook.com/thamil.selven.129" class="social-btn" target="_blank" title="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://youtube.com/@tselven" class="social-btn" target="_blank" title="YouTube">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                    <a href="https://wa.me/94753271665" class="social-btn" target="_blank" title="WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <a href="mailto:contact@tselven.com" class="social-btn" title="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
+            <div class="service-content">
+              <h3 class="service-title">Resume Writing</h3>
+              <p class="service-description">
+                ATS-optimized professional resumes
+              </p>
             </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-person"></i>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Mentoring</h3>
+              <p class="service-description">
+                Career guidance and professional journey discussions
+              </p>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Website Development</h3>
+              <p class="service-description">
+                Custom web applications & solutions
+              </p>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fab fa-salesforce"></i>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Salesforce Development</h3>
+              <p class="service-description">
+                Customization & consulting services
+              </p>
+            </div>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">Business Automation</h3>
+              <p class="service-description">
+                Streamline operations & workflows
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <h2 class="section-title">Professional Experience</h2>
+
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-title">Software Engineer L2</div>
+              <div class="timeline-company">Jyothi's ICT Zone Pvt Ltd</div>
+            </div>
+            <div class="timeline-date">Jun 2025 - Present</div>
+          </div>
+          <ul class="timeline-list">
+            <li>
+              Optimized AWS and DigitalOcean cloud infrastructure, improving
+              system uptime by 30%
+            </li>
+            <li>
+              Automated CI/CD pipelines using Docker and Git, reducing
+              deployment time by 45%
+            </li>
+            <li>
+              Designed and implemented RESTful APIs using Node.js and MongoDB,
+              supporting 5k+ monthly users
+            </li>
+            <li>
+              Improved application performance through database indexing and API
+              optimization, reducing response latency by 25%
+            </li>
+          </ul>
         </div>
 
-        <!-- About -->
-        <div class="about">
-            <h2 class="section-title">About</h2>
-            <p class="about-text">
-                Software Engineer with 1+ years of experience specializing in scalable REST APIs, containerized systems, and SaaS platforms. Proven track record of optimizing cloud infrastructure (AWS, DigitalOcean) and automating CI/CD pipelines. Currently pursuing Bachelor's in IT at University of Colombo while working full-time at Jyothi's ICT Zone.
-            </p>
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-title">Intern Web Developer</div>
+              <div class="timeline-company">WebBuilders.lk</div>
+            </div>
+            <div class="timeline-date">Jul 2024 - Jan 2025</div>
+          </div>
+          <ul class="timeline-list">
+            <li>
+              Developed Laravel-based backend services, reducing manual business
+              operations by 40%
+            </li>
+            <li>
+              Built Vue.js user interfaces integrated with REST APIs, improving
+              user engagement by 20%
+            </li>
+            <li>
+              Extended e-commerce systems with booking and reservation features
+              used by 3+ client projects
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <h2 class="section-title">Education</h2>
+
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-title">
+                Bachelor of Information Technology (External)
+              </div>
+              <div class="timeline-company">
+                University of Colombo School of Computing
+              </div>
+            </div>
+            <div class="timeline-date">2025 - Present</div>
+          </div>
         </div>
 
-        <!-- Stats -->
-        <div class="stats">
-            <div class="stat-card">
-                <div class="stat-number">1+ </div>
-                <div class="stat-label">Experience (Years)</div>
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-title">Higher National Diploma in IT</div>
+              <div class="timeline-company">University College of Jaffna</div>
             </div>
-            <div class="stat-card">
-                <div class="stat-number">6+</div>
-                <div class="stat-label">Mentored Persons</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">5+</div>
-                <div class="stat-label">Projects Delivered</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">3+</div>
-                <div class="stat-label">Startups Helped</div>
-            </div>
+            <div class="timeline-date">2023 - 2026</div>
+          </div>
         </div>
+      </div>
 
-        <!-- Services -->
-        <div class="services">
-            <h2 class="section-title">Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-file-alt"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title">Resume Writing</h3>
-                        <p class="service-description">ATS-optimized professional resumes</p>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-person"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title">Mentoring</h3>
-                        <p class="service-description">Get Career Guidance or any Professional Journey Discussion</p>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title">Website Development</h3>
-                        <p class="service-description">Custom web applications & solutions</p>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fab fa-salesforce"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title">Salesforce Development</h3>
-                        <p class="service-description">Customization & consulting services</p>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title">Business Automation</h3>
-                        <p class="service-description">Streamline operations & workflows</p>
-                    </div>
-                </div>
+      <div class="timeline">
+        <h2 class="section-title">Certifications</h2>
+        <div class="cert-grid">
+          <div class="cert-item">
+            <div class="cert-icon"><i class="fab fa-python"></i></div>
+            <div class="cert-content">
+              <div class="cert-name">Python for Beginners</div>
+              <div class="cert-issuer">University of Moratuwa (2024)</div>
             </div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+            <div class="cert-content">
+              <div class="cert-name">Foundations of Cybersecurity</div>
+              <div class="cert-issuer">Google (2024)</div>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <!-- Experience -->
-        <div class="timeline">
-            <h2 class="section-title">Professional Experience</h2>
-            
-            <div class="timeline-item">
-                <div class="timeline-header">
-                    <div>
-                        <div class="timeline-title">Software Engineer L2</div>
-                        <div class="timeline-company">Jyothi's ICT Zone Pvt Ltd</div>
-                    </div>
-                    <div class="timeline-date">Jun 2025 - Present</div>
-                </div>
-                <ul class="timeline-list">
-                    <li>Optimized AWS and DigitalOcean cloud infrastructure, improving system uptime by 30%</li>
-                    <li>Automated CI/CD pipelines using Docker and Git, reducing deployment time by 45%</li>
-                    <li>Designed and implemented RESTful APIs using Node.js and MongoDB, supporting 5k+ monthly users</li>
-                    <li>Improved application performance through database indexing and API optimization, reducing response latency by 25%</li>
-                </ul>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-header">
-                    <div>
-                        <div class="timeline-title">Intern Web Developer</div>
-                        <div class="timeline-company">WebBuilders.lk</div>
-                    </div>
-                    <div class="timeline-date">Jul 2024 - Jan 2025</div>
-                </div>
-                <ul class="timeline-list">
-                    <li>Developed Laravel-based backend services, reducing manual business operations by 40%</li>
-                    <li>Built Vue.js user interfaces integrated with REST APIs, improving user engagement by 20%</li>
-                    <li>Extended e-commerce systems with booking and reservation features used by 3+ client projects</li>
-                </ul>
-            </div>
+      <div class="timeline">
+        <h2 class="section-title">Research Publications</h2>
+        <div class="publication-card">
+          <div class="publication-title">
+            Web-Based Face Recognition Attendance System using Laravel, FastAPI,
+            and Vector Databases
+          </div>
+          <div class="publication-venue">
+            International Research Symposium (IRS 2025)
+          </div>
+          <div class="publication-location">Sri Lanka</div>
         </div>
+      </div>
 
-        <!-- Education -->
-        <div class="timeline">
-            <h2 class="section-title">Education</h2>
-            
-            <div class="timeline-item">
-                <div class="timeline-header">
-                    <div>
-                        <div class="timeline-title">Bachelor of Information Technology (External)</div>
-                        <div class="timeline-company">University of Colombo School of Computing</div>
-                    </div>
-                    <div class="timeline-date">2025 - Present</div>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-header">
-                    <div>
-                        <div class="timeline-title">Higher National Diploma in IT</div>
-                        <div class="timeline-company">University College of Jaffna</div>
-                    </div>
-                    <div class="timeline-date">2023 - 2026</div>
-                </div>
-            </div>
+      <div class="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web Apps</button>
+          <button class="filter-btn" data-filter="ai">AI/ML</button>
+          <button class="filter-btn" data-filter="devops">DevOps</button>
+          <button class="filter-btn" data-filter="automation">
+            Automation
+          </button>
         </div>
+        <div class="projects-grid" id="projectsGrid"></div>
+      </div>
 
-        <!-- Certifications -->
-        <div class="timeline">
-            <h2 class="section-title">Certifications</h2>
-            <div class="cert-grid">
-                <div class="cert-item">
-                    <div class="cert-icon"><i class="fab fa-python"></i></div>
-                    <div class="cert-content">
-                        <div class="cert-name">Python for Beginners</div>
-                        <div class="cert-issuer">University of Moratuwa (2024)</div>
-                    </div>
-                </div>
-                <div class="cert-item">
-                    <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
-                    <div class="cert-content">
-                        <div class="cert-name">Foundations of Cybersecurity</div>
-                        <div class="cert-issuer">Google (2024)</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <div class="testimonials">
+        <h2 class="section-title">Testimonials & Recommendations</h2>
+        <div class="testimonials-grid" id="testimonialsGrid"></div>
+      </div>
 
-        <!-- Publications -->
-        <div class="timeline">
-            <h2 class="section-title">Research Publications</h2>
-            <div class="publication-card">
-                <div class="publication-title">
-                    Web-Based Face Recognition Attendance System using Laravel, FastAPI, and Vector Databases
-                </div>
-                <div class="publication-venue">International Research Symposium (IRS 2025)</div>
-                <div class="publication-location">Sri Lanka</div>
-            </div>
+      <div class="skills">
+        <h2 class="section-title">Tech Stack</h2>
+        <div class="skills-grid">
+          <div class="skill-tag">Laravel</div>
+          <div class="skill-tag">Node.js</div>
+          <div class="skill-tag">Docker</div>
+          <div class="skill-tag">AWS</div>
+          <div class="skill-tag">MongoDB</div>
+          <div class="skill-tag">PostgreSQL</div>
+          <div class="skill-tag">CI/CD</div>
+          <div class="skill-tag">Vue.js</div>
+          <div class="skill-tag">REST APIs</div>
+          <div class="skill-tag">Python</div>
+          <div class="skill-tag">FastAPI</div>
+          <div class="skill-tag">Linux</div>
         </div>
+      </div>
 
-        <!-- Skills -->
-        <div class="skills">
-            <h2 class="section-title">Tech Stack</h2>
-            <div class="skills-grid">
-                <div class="skill-tag">Laravel</div>
-                <div class="skill-tag">Node.js</div>
-                <div class="skill-tag">Docker</div>
-                <div class="skill-tag">AWS</div>
-                <div class="skill-tag">MongoDB</div>
-                <div class="skill-tag">PostgreSQL</div>
-                <div class="skill-tag">CI/CD</div>
-                <div class="skill-tag">Vue.js</div>
-                <div class="skill-tag">REST APIs</div>
-                <div class="skill-tag">Python</div>
-                <div class="skill-tag">FastAPI</div>
-                <div class="skill-tag">Linux</div>
+      <div class="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-grid">
+          <a href="mailto:contact@tselven.com" class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
             </div>
-        </div>
-
-        <!-- Contact -->
-        <div class="contact">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-grid">
-                <a href="mailto:contact@tselven.com" class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <span>contact@tselven.com</span>
-                </a>
-                <a href="https://wa.me/94753271665" class="contact-item" target="_blank">
-                    <div class="contact-icon">
-                        <i class="fab fa-whatsapp"></i>
-                    </div>
-                    <span>+94 75 327 1665</span>
-                </a>
-                <a href="https://tselven.com" class="contact-item" target="_blank">
-                    <div class="contact-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <span>tselven.com</span>
-                </a>
+            <span>contact@tselven.com</span>
+          </a>
+          <a
+            href="https://wa.me/94753271665"
+            class="contact-item"
+            target="_blank"
+          >
+            <div class="contact-icon">
+              <i class="fab fa-whatsapp"></i>
             </div>
+            <span>+94 75 327 1665</span>
+          </a>
+          <a href="https://tselven.com" class="contact-item" target="_blank">
+            <div class="contact-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+            <span>tselven.com</span>
+          </a>
         </div>
+      </div>
     </div>
+    <!-- WhatsApp Floating Button -->
+    <div class="wa-float" onclick="toggleWA()"><i class="fab fa-whatsapp"></i></div>
 
-    <!-- Floating Particles -->
-    <!-- Floating Particles -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-        // Theme Switcher
-        const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = document.getElementById('themeIcon');
-        const htmlElement = document.documentElement;
+    <!-- Popup -->
+    <div class="wa-popup" id="waPopup">
+      <div class="wa-header">
+        Chat with me on WhatsApp
+        <span class="wa-close" onclick="toggleWA()">×</span>
+      </div>
+      <div class="wa-body">
+        <p>Hi 👋 Have a question or want to connect?</p>
 
-        // Check for saved theme preference or default to 'light'
-        const currentTheme = localStorage.getItem('theme') || 'light';
-        htmlElement.setAttribute('data-theme', currentTheme);
-        updateThemeIcon(currentTheme);
-
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = htmlElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            
-            htmlElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            updateThemeIcon(newTheme);
-        });
-
-        function updateThemeIcon(theme) {
-            if (theme === 'dark') {
-                themeIcon.className = 'fas fa-sun';
-            } else {
-                themeIcon.className = 'fas fa-moon';
-            }
-        }
-
-        // Create floating particles
-        for (let i = 0; i < 15; i++) {
-            const particle = document.createElement('div');
-            particle.className = 'particle';
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.animationDelay = Math.random() * 8 + 's';
-            particle.style.animationDuration = (Math.random() * 5 + 6) + 's';
-            document.body.appendChild(particle);
-        }
-    </script>
-</body>
+        <a
+          href="https://wa.me/+94753271665?text=Hi%20I%20visited%20your%20website!"
+          target="_blank"
+        >
+          Start Chat
+        </a>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
