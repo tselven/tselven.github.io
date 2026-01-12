@@ -549,6 +549,27 @@
           </div>
 
           <div class="input-group">
+            <label for="phone">
+              <i class="fas fa-phone"></i>
+              Phone (WhatsApp preferred)
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="+94 75 327 1665"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="subject">
+              <i class="fas fa-tag"></i>
+              Subject
+            </label>
+            <input type="text" name="subject" id="subject" placeholder="Request Service"/>
+          </div>
+          
+          <div class="input-group">
             <label for="message">
               <i class="fas fa-comment-dots"></i>
               Message
@@ -562,7 +583,7 @@
             ></textarea>
           </div>
 
-          <div class="h-captcha" data-captcha="true"></div>
+          <div class="h-captcha" data-captcha="true" style="margin-bottom: 10px;"></div>
 
           <button type="submit" class="submit-btn">
             <i class="fas fa-paper-plane"></i>
