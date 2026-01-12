@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ZNV5EGM8H1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-ZNV5EGM8H1");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms of Service</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .content-wrapper {
+        position: relative;
+        z-index: 1;
+        max-width: 900px;
+        width: 100%;
+      }
+
+      .policy-section {
+        margin-bottom: 40px;
+        animation: fadeIn 1s ease-out backwards;
+      }
+
+      .policy-section:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .policy-section:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      .policy-section:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+      .policy-section:nth-child(5) {
+        animation-delay: 0.5s;
+      }
+
+      .policy-intro {
+        font-size: 15px;
+        color: var(--text-secondary);
+        line-height: 1.8;
+        margin-bottom: 40px;
+      }
+
+      .policy-section h2 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        background: linear-gradient(
+          135deg,
+          var(--gradient-1),
+          var(--gradient-2)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .policy-section h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--text-primary);
+        margin: 24px 0 12px;
+      }
+
+      .policy-section p {
+        color: var(--text-secondary);
+        line-height: 1.8;
+        margin-bottom: 16px;
+        font-size: 15px;
+      }
+
+      .policy-list {
+        list-style: none;
+        padding: 0;
+        margin: 16px 0;
+      }
+
+      .policy-list li {
+        position: relative;
+        padding-left: 28px;
+        margin-bottom: 12px;
+        color: var(--text-secondary);
+        line-height: 1.7;
+        font-size: 14px;
+      }
+
+      .policy-list li::before {
+        content: "▹";
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      .highlight-box {
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
+        border-left: 4px solid var(--accent);
+        padding: 20px;
+        border-radius: 12px;
+        margin: 24px 0;
+      }
+
+      .highlight-box p {
+        margin-bottom: 0;
+      }
+
+      .warning-box {
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
+        border-left: 4px solid #ef4444;
+        padding: 20px;
+        border-radius: 12px;
+        margin: 24px 0;
+      }
+
+      .warning-box p {
+        margin-bottom: 0;
+      }
+
+      .last-updated {
+        display: inline-block;
+        background: var(--bg-secondary);
+        padding: 8px 16px;
+        border-radius: 20px;
+        border: 1px solid var(--border);
+        font-size: 13px;
+        color: var(--text-secondary);
+        font-family: "JetBrains Mono", monospace;
+        margin-bottom: 30px;
+      }
+
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--accent);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 30px;
+        transition: all 0.3s ease;
+      }
+
+      .back-link:hover {
+        gap: 12px;
+      }
+
+      .back-link i {
+        transition: transform 0.3s ease;
+      }
+
+      .back-link:hover i {
+        transform: translateX(-4px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-animation">
+      <div class="floating-shape shape-1"></div>
+      <div class="floating-shape shape-2"></div>
+      <div class="floating-shape shape-3"></div>
+      <div class="floating-shape shape-4"></div>
+    </div>
+
+    <button
+      class="theme-toggle"
+      onclick="toggleTheme()"
+      aria-label="Toggle theme"
+    >
+      <i class="fas fa-moon"></i>
+    </button>
+
+    <div class="content-wrapper">
+      <div class="card">
+        <a href="index.html" class="back-link">
+          <i class="fas fa-arrow-left"></i>
+          Back to Home
+        </a>
+
+        <h1 class="name">
+          <span class="name-highlight">Terms of Service</span>
+        </h1>
+
+        <div class="last-updated">
+          <i class="fas fa-calendar-alt"></i> Last Updated: January 12, 2026
+        </div>
+
+        <p class="policy-intro">
+          Welcome to our website. By accessing or using our services, you agree
+          to be bound by these Terms of Service. Please read them carefully
+          before proceeding. If you do not agree with any part of these terms,
+          you may not use our services.
+        </p>
+
+        <div class="policy-section">
+          <h2>1. Acceptance of Terms</h2>
+          <p>
+            By accessing and using this website and our services, you accept and
+            agree to be bound by the terms and provisions of this agreement.
+            Additionally, when using particular services, you shall be subject
+            to any posted guidelines or rules applicable to such services.
+          </p>
+
+          <div class="highlight-box">
+            <p>
+              <strong>Important:</strong> These Terms of Service constitute a
+              legally binding agreement between you and us. Your continued use
+              of our services signifies your acceptance of these terms.
+            </p>
+          </div>
+        </div>
+
+        <div class="policy-section">
+          <h2>2. Use License</h2>
+
+          <h3>Permitted Use</h3>
+          <p>
+            Permission is granted to temporarily access and use the materials on
+            our website for personal, non-commercial viewing only. This is the
+            grant of a license, not a transfer of title, and under this license
+            you may not:
+          </p>
+          <ul class="policy-list">
+            <li>Modify or copy the materials</li>
+            <li>
+              Use the materials for any commercial purpose or public display
+            </li>
+            <li>
+              Attempt to decompile or reverse engineer any software contained on
+              our website
+            </li>
+            <li>
+              Remove any copyright or other proprietary notations from the
+              materials
+            </li>
+            <li>
+              Transfer the materials to another person or "mirror" the materials
+              on any other server
+            </li>
+          </ul>
+
+          <h3>License Termination</h3>
+          <p>
+            This license shall automatically terminate if you violate any of
+            these restrictions and may be terminated by us at any time. Upon
+            terminating your viewing of these materials or upon the termination
+            of this license, you must destroy any downloaded materials in your
+            possession.
+          </p>
+        </div>
+
+        <div class="policy-section">
+          <h2>3. User Accounts and Registration</h2>
+          <p>
+            When you create an account with us, you must provide accurate,
+            complete, and current information. You are responsible for:
+          </p>
+          <ul class="policy-list">
+            <li>Maintaining the confidentiality of your account credentials</li>
+            <li>All activities that occur under your account</li>
+            <li>
+              Notifying us immediately of any unauthorized use of your account
+            </li>
+            <li>
+              Ensuring your account information remains current and accurate
+            </li>
+          </ul>
+
+          <div class="warning-box">
+            <p>
+              <strong>Warning:</strong> We reserve the right to suspend or
+              terminate accounts that violate these terms or engage in
+              fraudulent, abusive, or illegal activities.
+            </p>
+          </div>
+        </div>
+
+        <div class="policy-section">
+          <h2>4. Prohibited Activities</h2>
+          <p>
+            You agree not to engage in any of the following prohibited
+            activities:
+          </p>
+          <ul class="policy-list">
+            <li>
+              Using our services for any illegal purpose or in violation of any
+              laws
+            </li>
+            <li>
+              Harassing, threatening, or defaming other users or third parties
+            </li>
+            <li>Uploading viruses, malware, or other malicious code</li>
+            <li>
+              Attempting to gain unauthorized access to our systems or networks
+            </li>
+            <li>
+              Scraping, crawling, or using automated tools to access our content
+            </li>
+            <li>
+              Impersonating any person or entity or misrepresenting your
+              affiliation
+            </li>
+            <li>Interfering with or disrupting the services or servers</li>
+            <li>
+              Collecting or storing personal data about other users without
+              consent
+            </li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h2>5. Intellectual Property Rights</h2>
+          <p>
+            All content, features, and functionality on our website, including
+            but not limited to text, graphics, logos, images, and software, are
+            the exclusive property of our company or our licensors and are
+            protected by international copyright, trademark, and other
+            intellectual property laws.
+          </p>
+
+          <h3>Content Ownership</h3>
+          <ul class="policy-list">
+            <li>
+              We retain all rights to our proprietary content and materials
+            </li>
+            <li>
+              You may not reproduce, distribute, or create derivative works
+              without permission
+            </li>
+            <li>
+              Trademarks and service marks displayed are the property of their
+              respective owners
+            </li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h2>6. User-Generated Content</h2>
+          <p>
+            If you submit, upload, or post content on our platform, you grant us
+            a worldwide, non-exclusive, royalty-free license to use, reproduce,
+            modify, and distribute such content. You represent and warrant that:
+          </p>
+          <ul class="policy-list">
+            <li>
+              You own or have the necessary rights to the content you submit
+            </li>
+            <li>Your content does not violate any third-party rights</li>
+            <li>
+              Your content does not contain illegal, harmful, or offensive
+              material
+            </li>
+            <li>
+              You will not submit false, misleading, or defamatory content
+            </li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h2>7. Payment Terms</h2>
+          <p>If you purchase products or services from us:</p>
+          <ul class="policy-list">
+            <li>
+              All fees are quoted in the specified currency and are
+              non-refundable unless otherwise stated
+            </li>
+            <li>
+              You agree to provide current, complete, and accurate billing
+              information
+            </li>
+            <li>
+              We reserve the right to change pricing at any time with reasonable
+              notice
+            </li>
+            <li>
+              Payment must be received prior to delivery of products or services
+            </li>
+            <li>
+              Late payments may result in suspension or termination of services
+            </li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h2>8. Disclaimer of Warranties</h2>
+          <p>
+            The materials and services on our website are provided on an 'as is'
+            basis. We make no warranties, expressed or implied, and hereby
+            disclaim all other warranties including, without limitation:
+          </p>
+          <ul class="policy-list">
+            <li>
+              Implied warranties of merchantability or fitness for any
+              particular purpose
+            </li>
+            <li>
+              That the services will be uninterrupted, timely, secure, or
+              error-free
+            </li>
+            <li>
+              The accuracy, reliability, or completeness of any content or
+              information
+            </li>
+            <li>
+              That defects will be corrected or that our servers are free of
+              viruses
+            </li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h2>9. Limitation of Liability</h2>
+          <p>
+            In no event shall we or our suppliers be liable for any damages
+            (including, without limitation, damages for loss of data or profit,
+            or due to business interruption) arising out of the use or inability
+            to use our services, even if we have been notified of the
+            possibility of such damage.
+          </p>
+
+          <div class="warning-box">
+            <p>
+              <strong>Maximum Liability:</strong> Our total liability to you for
+              any claims arising from or related to these terms shall not exceed
+              the amount you paid us in the twelve (12) months preceding the
+              claim.
+            </p>
+          </div>
+        </div>
+
+        <div class="policy-section">
+          <h2>10. Indemnification</h2>
+          <p>
+            You agree to indemnify, defend, and hold harmless our company, its
+            affiliates, officers, directors, employees, and agents from any
+            claims, liabilities, damages, losses, and expenses, including
+            reasonable attorneys' fees, arising out of or in any way connected
+            with:
+          </p>
+          <ul class="policy-list">
+            <li>Your access to or use of our services</li>
+            <li>Your violation of these Terms of Service</li>
+            <li>
+              Your violation of any third-party rights, including intellectual
+              property rights
+            </li>
+            <li>
+              Any harm caused to third parties through your use of our services
+            </li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h2>11. Third-Party Links</h2>
+          <p>
+            Our website may contain links to third-party websites or services
+            that are not owned or controlled by us. We have no control over and
+            assume no responsibility for the content, privacy policies, or
+            practices of any third-party websites or services. You acknowledge
+            and agree that we shall not be liable for any damage or loss caused
+            by your use of such third-party content.
+          </p>
+        </div>
+
+        <div class="policy-section">
+          <h2>12. Modifications to Terms</h2>
+          <p>
+            We reserve the right to modify or replace these Terms of Service at
+            any time at our sole discretion. If a revision is material, we will
+            provide at least 30 days' notice prior to any new terms taking
+            effect. What constitutes a material change will be determined at our
+            sole discretion.
+          </p>
+
+          <div class="highlight-box">
+            <p>
+              <strong>Your Responsibility:</strong> By continuing to access or
+              use our services after those revisions become effective, you agree
+              to be bound by the revised terms.
+            </p>
+          </div>
+        </div>
+
+        <div class="policy-section">
+          <h2>13. Termination</h2>
+          <p>
+            We may terminate or suspend your access to our services immediately,
+            without prior notice or liability, for any reason, including without
+            limitation if you breach these Terms of Service. Upon termination:
+          </p>
+          <ul class="policy-list">
+            <li>Your right to use the services will immediately cease</li>
+            <li>
+              You must cease all use of our services and delete any copies you
+              have made
+            </li>
+            <li>
+              All provisions of the Terms which should survive termination shall
+              survive
+            </li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h2>14. Governing Law</h2>
+          <p>
+            These Terms shall be governed and construed in accordance with the
+            laws of [Your Jurisdiction], without regard to its conflict of law
+            provisions. Our failure to enforce any right or provision of these
+            Terms will not be considered a waiver of those rights.
+          </p>
+        </div>
+
+        <div class="policy-section">
+          <h2>15. Dispute Resolution</h2>
+          <p>
+            Any dispute arising from or relating to these Terms of Service shall
+            be resolved through:
+          </p>
+          <ul class="policy-list">
+            <li>
+              <strong>Informal Negotiations:</strong> First, we'll attempt to
+              resolve disputes informally
+            </li>
+            <li>
+              <strong>Mediation:</strong> If informal resolution fails, disputes
+              shall be submitted to mediation
+            </li>
+            <li>
+              <strong>Arbitration:</strong> Unresolved disputes may proceed to
+              binding arbitration
+            </li>
+            <li>
+              <strong>Class Action Waiver:</strong> You agree to resolve
+              disputes on an individual basis only
+            </li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h2>16. Contact Information</h2>
+          <p>
+            If you have any questions about these Terms of Service, please
+            contact us:
+          </p>
+
+          <div class="highlight-box">
+            <p>
+              <i
+                class="fas fa-envelope"
+                style="color: var(--accent); margin-right: 8px"
+              ></i>
+              <strong>Email:</strong> contact@tselven.com<br /><br />
+              <i
+                class="fas fa-phone"
+                style="color: var(--accent); margin-right: 8px"
+              ></i>
+              <strong>Phone:</strong> +94 75-3271-665<br /><br />
+              <i
+                class="fas fa-map-marker-alt"
+                style="color: var(--accent); margin-right: 8px"
+              ></i>
+              <strong>Address:</strong> Jaffna, Sri Lanka
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            © 2026 <strong>Thamilselven</strong>. All rights reserved.
+          </p>
+          <ul class="footer-links-bottom">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <button
+      class="scroll-to-top"
+      onclick="scrollToTop()"
+      aria-label="Scroll to top"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+      // Theme Toggle
+      function toggleTheme() {
+        const html = document.documentElement;
+        const themeIcon = document.querySelector(".theme-toggle i");
+        const currentTheme = html.getAttribute("data-theme");
+
+        if (currentTheme === "dark") {
+          html.removeAttribute("data-theme");
+          themeIcon.className = "fas fa-moon";
+          localStorage.setItem("theme", "light");
+        } else {
+          html.setAttribute("data-theme", "dark");
+          themeIcon.className = "fas fa-sun";
+          localStorage.setItem("theme", "dark");
+        }
+      }
+
+      // Load saved theme
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+        document.querySelector(".theme-toggle i").className = "fas fa-sun";
+      }
+
+      // Scroll to Top
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      window.addEventListener("scroll", () => {
+        const scrollBtn = document.querySelector(".scroll-to-top");
+        if (window.pageYOffset > 300) {
+          scrollBtn.classList.add("show");
+        } else {
+          scrollBtn.classList.remove("show");
+        }
+      });
+
+      // Floating particles
+      function createParticle() {
+        const particle = document.createElement("div");
+        particle.className = "particle";
+        particle.style.left = Math.random() * 100 + "%";
+        particle.style.animationDuration = Math.random() * 5 + 5 + "s";
+        particle.style.animationDelay = Math.random() * 5 + "s";
+        document.body.appendChild(particle);
+
+        setTimeout(() => particle.remove(), 13000);
+      }
+
+      setInterval(createParticle, 2000);
+    </script>
+  </body>
+</html>

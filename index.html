@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ZNV5EGM8H1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-ZNV5EGM8H1");
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -34,6 +48,43 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- =================== MOBILE NAVBAR TOGGLE =================== -->
+    <!-- Add this right after opening <body> tag, before theme-toggle button -->
+
+    <button class="nav-toggle" id="navToggle" onclick="toggleNav()">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- =================== NAVBAR =================== -->
+    <!-- Add this after the nav-toggle button -->
+
+    <nav class="navbar" id="navbar">
+      <a href="#home" class="nav-btn" onclick="closeNavOnMobile()">
+        <i class="fas fa-home"></i>
+        <span class="nav-tooltip">Home</span>
+      </a>
+      <a href="#about" class="nav-btn" onclick="closeNavOnMobile()">
+        <i class="fas fa-user"></i>
+        <span class="nav-tooltip">About</span>
+      </a>
+      <a href="#services" class="nav-btn" onclick="closeNavOnMobile()">
+        <i class="fas fa-briefcase"></i>
+        <span class="nav-tooltip">Services</span>
+      </a>
+      <a href="#projects" class="nav-btn" onclick="closeNavOnMobile()">
+        <i class="fas fa-code"></i>
+        <span class="nav-tooltip">Projects</span>
+      </a>
+      <a href="#skills" class="nav-btn" onclick="closeNavOnMobile()">
+        <i class="fas fa-tools"></i>
+        <span class="nav-tooltip">Skills</span>
+      </a>
+      <a href="#contact-form" class="nav-btn" onclick="closeNavOnMobile()">
+        <i class="fas fa-envelope"></i>
+        <span class="nav-tooltip">Contact</span>
+      </a>
+    </nav>
+
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
       <i class="fas fa-moon" id="themeIcon"></i>
     </button>
@@ -105,6 +156,22 @@
               title="WhatsApp"
             >
               <i class="fab fa-whatsapp"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/sp.thamilselven/"
+              class="social-btn"
+              target="_blank"
+              title="Instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://medium.com/@tselven13"
+              class="social-btn"
+              target="_blank"
+              title="medium"
+            >
+              <i class="fa-brands fa-medium"></i>
             </a>
             <a
               href="mailto:contact@tselven.com"
@@ -452,7 +519,7 @@
             name="access_key"
             value="ab4447eb-ddf1-4cf2-aba5-a948459f8eb4"
           />
-          
+
           <div class="input-group">
             <label for="name">
               <i class="fas fa-user"></i>
@@ -531,8 +598,32 @@
           </a>
         </div>
       </div>
+
+      <!-- =================== FOOTER (SIMPLIFIED) =================== -->
+      <!-- Add this inside the .card div, after the contact section, before closing </div> -->
+
+      <footer class="footer">
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            © 2026 <strong>Thamilselven</strong>. All rights reserved. Built
+            with ❤️
+          </p>
+          <ul class="footer-links-bottom">
+            <li><a href="./privacy.html">Privacy Policy</a></li>
+            <li><a href="./terms.html">Terms of Service</a></li>
+            <li>
+              <a href="https://tselven.com" target="_blank">tselven.com</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
     </div>
 
+    <!-- =================== SCROLL TO TOP BUTTON =================== -->
+
+    <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">
+      <i class="fas fa-arrow-up"></i>
+    </button>
     <!-- WhatsApp Floating Button -->
     <div class="wa-float" onclick="toggleWA()">
       <i class="fab fa-whatsapp"></i>

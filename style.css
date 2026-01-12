@@ -1326,7 +1326,7 @@ body {
 
 .cta-primary {
   background: var(--accent);
-  color: white;
+  color: var(--text-primary);
   border: 1px solid var(--accent);
 }
 
@@ -1479,4 +1479,262 @@ body {
     width: 100%;
     justify-content: center;
   }
+}
+/* Navbar - Creative Rounded Left Design */
+.navbar {
+    position: fixed;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    animation: slideInLeft 0.8s ease-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateY(-50%) translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+    }
+}
+
+.nav-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px 15px 15px 25px;
+    background: var(--card-bg);
+    border: 2px solid var(--border);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--text-primary);
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-btn::before {
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+    transition: left 0.4s ease;
+    z-index: -1;
+}
+
+.nav-btn:hover::before {
+    left: 0;
+}
+
+.nav-btn:hover {
+    color: white;
+    border-color: var(--accent);
+    transform: translateX(10px);
+    box-shadow: 0 5px 20px var(--accent-glow);
+}
+
+.nav-btn i {
+    font-size: 18px;
+    position: relative;
+    z-index: 1;
+}
+
+.nav-tooltip {
+    position: absolute;
+    left: 60px;
+    background: var(--card-bg);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+}
+
+.nav-btn:hover .nav-tooltip {
+    opacity: 1;
+    left: 70px;
+}
+
+/* Mobile Navbar Toggle */
+.nav-toggle {
+    display: none;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px 15px 15px 25px;
+    background: var(--card-bg);
+    border: 2px solid var(--border);
+    backdrop-filter: blur(10px);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1001;
+    color: var(--text-primary);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-toggle i {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.nav-toggle.active i {
+    transform: rotate(90deg);
+}
+
+/* Footer Section - Simplified */
+.footer {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    width: 100%;
+    margin-top: 60px;
+    padding: 30px 0 20px;
+    border-top: 2px solid var(--border);
+    animation: fadeIn 1s ease-out 1.2s backwards;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-copyright {
+    color: var(--text-secondary);
+    font-size: 13px;
+}
+
+.footer-copyright strong {
+    background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+.footer-links-bottom {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links-bottom a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+
+.footer-links-bottom a:hover {
+    color: var(--accent);
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    box-shadow: 0 4px 15px var(--accent-glow);
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px var(--accent-glow);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .navbar {
+        left: 20px;
+        top: 150px;
+        transform: translateY(0);
+        gap: 8px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .navbar.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-btn {
+        width: 45px;
+        height: 45px;
+    }
+
+    .nav-btn i {
+        font-size: 16px;
+    }
+
+    .nav-tooltip {
+        display: none;
+    }
+
+    .footer {
+        margin-top: 40px;
+        padding: 20px 0 15px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .scroll-to-top {
+        bottom: 95px;
+    }
 }

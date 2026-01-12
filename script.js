@@ -200,3 +200,97 @@ document.addEventListener('DOMContentLoaded', () => {
     loadProjects();
     loadReviews();
 });
+
+// Mobile Navbar Toggle
+function toggleNav() {
+    const navbar = document.getElementById('navbar');
+    const navToggle = document.getElementById('navToggle');
+    navbar.classList.toggle('show');
+    navToggle.classList.toggle('active');
+}
+
+// Close navbar on mobile when clicking a link
+function closeNavOnMobile() {
+    if (window.innerWidth <= 768) {
+        const navbar = document.getElementById('navbar');
+        const navToggle = document.getElementById('navToggle');
+        navbar.classList.remove('show');
+        navToggle.classList.remove('active');
+    }
+}
+
+// Close navbar when clicking outside
+document.addEventListener('click', function(e) {
+    const navbar = document.getElementById('navbar');
+    const navToggle = document.getElementById('navToggle');
+    
+    if (window.innerWidth <= 768) {
+        if (!navbar.contains(e.target) && !navToggle.contains(e.target)) {
+            navbar.classList.remove('show');
+            navToggle.classList.remove('active');
+        }
+    }
+});
+
+// Scroll to Top Button
+const scrollToTopBtn = document.getElementById('scrollToTop');
+
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+        scrollToTopBtn.classList.add('show');
+    } else {
+        scrollToTopBtn.classList.remove('show');
+    }
+});
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Smooth scroll for navbar links
+document.querySelectorAll('.navbar a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href.startsWith('#')) {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+    });
+});
+
+// Add IDs to sections for navbar navigation
+document.addEventListener('DOMContentLoaded', () => {
+    // Add ID to card for home
+    if (document.querySelector('.card')) {
+        document.querySelector('.card').id = 'home';
+    }
+    
+    // Add ID to about section
+    if (document.querySelector('.about')) {
+        document.querySelector('.about').id = 'about';
+    }
+    
+    // Add ID to services section
+    if (document.querySelector('.services')) {
+        document.querySelector('.services').id = 'services';
+    }
+    
+    // Add ID to projects section
+    if (document.querySelector('.projects')) {
+        document.querySelector('.projects').id = 'projects';
+    }
+    
+    // Add ID to skills section
+    if (document.querySelector('.skills')) {
+        document.querySelector('.skills').id = 'skills';
+    }
+});
