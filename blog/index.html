@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Thamilselven</title>
+    <meta name="description" content="Latest articles and insights from Thamilselven's software engineering journey">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../blog/blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class="fas fa-moon" id="themeIcon"></i>
+    </button>
+
+    <div class="bg-animation">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="floating-shape shape-4"></div>
+    </div>
+
+    <div class="card blog-index-card">
+        <header class="blog-index-header">
+            <h1 class="blog-index-title">My Blog</h1>
+            <p class="blog-index-subtitle">Sharing insights, tutorials, and thoughts on software engineering</p>
+        </header>
+
+        <div class="blog-content-wrapper">
+            <aside class="blog-sidebar">
+                <div class="sidebar-content">
+                    <div class="blog-profile">
+                        <img src="../thamilselven.jpg" alt="Thamilselven" class="blog-profile-img">
+                        <h3 class="blog-author-name">Thamilselven</h3>
+                        <p class="blog-author-title">Software Engineer | Backend & DevOps</p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title">About This Blog</h3>
+                        <p class="sidebar-text">Welcome to my personal blog where I share my experiences, learnings, and insights about software engineering, backend development, and DevOps.</p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title">Categories</h3>
+                        <div class="categories-list">
+                            <a href="#" class="category-link">aws</a><a href="#" class="category-link">cloud</a><a href="#" class="category-link">cybersecurity</a><a href="#" class="category-link">devops</a><a href="#" class="category-link">docker</a><a href="#" class="category-link">network-security</a><a href="#" class="category-link">security</a>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title">Subscribe</h3>
+                        <p class="sidebar-text">Stay updated with our latest posts.</p>
+                        <a href="./rss.xml" class="rss-subscribe-link" target="_blank">
+                            <i class="fas fa-rss"></i> Subscribe via RSS
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="blog-main-content">
+                <div class="blog-posts-grid">
+                    
+        <article class="blog-post-card">
+            <h2 class="blog-post-card-title">
+                <a href="cybersecurity-basics.html">Cybersecurity Basics: A Beginner's Guide</a>
+            </h2>
+            <div class="blog-post-meta">
+                <span class="blog-date"><i class="far fa-calendar"></i> January 14, 2026</span>
+                <div class="blog-tags"><span class="blog-tag">cybersecurity</span><span class="blog-tag">security</span><span class="blog-tag">network-security</span><span class="blog-tag">cloud</span></div>
+            </div>
+            <p class="blog-post-excerpt">Learn the fundamentals of cybersecurity, common threats, and best practices to protect systems, networks, and data.</p>
+            <a href="cybersecurity-basics.html" class="read-more-link">Read More <i class="fas fa-arrow-right"></i></a>
+        </article>
+        <article class="blog-post-card">
+            <h2 class="blog-post-card-title">
+                <a href="getting-started-with-devops.html">Getting Started with DevOps: A Beginner's Guide</a>
+            </h2>
+            <div class="blog-post-meta">
+                <span class="blog-date"><i class="far fa-calendar"></i> January 14, 2026</span>
+                <div class="blog-tags"><span class="blog-tag">devops</span><span class="blog-tag">cloud</span><span class="blog-tag">docker</span><span class="blog-tag">aws</span></div>
+            </div>
+            <p class="blog-post-excerpt">Learn the fundamental concepts of DevOps, its benefits, and how to get started with DevOps practices in your organization.</p>
+            <a href="getting-started-with-devops.html" class="read-more-link">Read More <i class="fas fa-arrow-right"></i></a>
+        </article>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Back to Home Button -->
+    <a href="../index.html" class="back-to-home">
+        <i class="fas fa-arrow-left"></i> Back to Portfolio
+    </a>
+
+    <script>
+        // Theme switching functionality (same as main site)
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const htmlElement = document.documentElement;
+
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        htmlElement.setAttribute('data-theme', currentTheme);
+        updateThemeIcon(currentTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+
+        function updateThemeIcon(theme) {
+            themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        }
+
+        // Format date helper for JavaScript
+        function formatDate(dateString) {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            return new Date(dateString).toLocaleDateString(undefined, options);
+        }
+    </script>
+</body>
+</html>
