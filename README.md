@@ -20,13 +20,16 @@ A modern, responsive portfolio website featuring a clean design with dark/light 
 
 ## Installation
 
-1. **Clone the repository:**
+1. **Fork the repository:**
+    - fork my repository into your github account
+
+2. **Clone the repository:**
    ```bash
    git clone https://github.com/yourusername/your-portfolio.git
    cd your-portfolio
    ```
 
-2. **Customize the content:**
+3. **Customize the content:**
 
    ### Profile Information
    - Replace `thamilselven.jpg` with your own profile photo (recommended size: 400x400px)
