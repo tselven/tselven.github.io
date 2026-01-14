@@ -555,6 +555,8 @@ def generate_sitemap(posts, base_url="https://tselven.com"):
     
     sitemap_content += f'  <url>\n    <loc>{base_url}/terms.html</loc>\n    <lastmod>{datetime.now().strftime("%Y-%m-%d")}</lastmod>\n    <changefreq>yearly</changefreq>\n    <priority>0.5</priority>\n  </url>\n'
     
+    sitemap_content += f'  <url>\n    <loc>{base_url}/resources.html</loc>\n    <lastmod>{datetime.now().strftime("%Y-%m-%d")}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.7</priority>\n  </url>\n'
+    
     # Add main blog page
     sitemap_content += f'  <url>\n    <loc>{base_url}/blog/index.html</loc>\n    <lastmod>{datetime.now().strftime("%Y-%m-%d")}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>\n'
     
