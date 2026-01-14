@@ -1,0 +1,26 @@
+{
+    "lastUpdated": "2026-01-14",
+    "categories": [
+        {
+            "id": "books",
+            "title": "Books",
+            "description": "Books that influenced my thinking.",
+            "items": [
+                {
+                    "title": "The Psychology of Money: Timeless lessons on wealth, greed, and happiness",
+                    "author": "Morgan Housel",
+                    "type": "book",
+                    "link": "https://www.amazon.com/Psychology-Money-Timeless-lessons-happiness/dp/0857197681",
+                    "affiliate": false,
+                    "image": "https://m.media-amazon.com/images/I/91he-6X9BZL._AC_UF1000,1000_QL80_.jpg",
+                    "tags": [
+                        "money",
+                        "finance",
+                        "personal development"
+                    ],
+                    "note": "A great book on money and finance."
+                }
+            ]
+        }
+    ]
+}

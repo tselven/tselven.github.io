@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources & Recommendations - Thamilselven</title>
+    <meta name="description" content="Curated list of resources, tools, books, and recommendations by Thamilselven">
+    <meta name="keywords" content="resources, recommendations, books, tools, software, gadgets, courses">
+    <meta name="author" content="Thamilselven">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Resources & Recommendations - Thamilselven">
+    <meta property="og:description" content="Curated list of resources, tools, books, and recommendations by Thamilselven">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tselven.com/resources.html">
+    <meta property="og:image" content="https://tselven.com/thamilselven.jpg">
+    <meta property="og:site_name" content="Thamilselven's Portfolio">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Resources & Recommendations - Thamilselven">
+    <meta name="twitter:description" content="Curated list of resources, tools, books, and recommendations by Thamilselven">
+    <meta name="twitter:image" content="https://tselven.com/thamilselven.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #f0f4ff;
+            --bg-secondary: #ffffff;
+            --accent: #ff6b35;
+            --accent-glow: rgba(255, 107, 53, 0.3);
+            --text-primary: #1a1a2e;
+            --text-secondary: #5a5a6e;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --border: rgba(255, 107, 53, 0.2);
+            --gradient-1: #ff6b35;
+            --gradient-2: #f7931e;
+            --gradient-3: #4ecdc4;
+            --gradient-4: #6c5ce7;
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #0a0e27;
+            --bg-secondary: #1a1f3a;
+            --accent: #00d9ff;
+            --accent-glow: rgba(0, 217, 255, 0.3);
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0b0;
+            --card-bg: rgba(26, 31, 58, 0.8);
+            --border: rgba(0, 217, 255, 0.2);
+            --gradient-1: #00d9ff;
+            --gradient-2: #6366f1;
+            --gradient-3: #ec4899;
+            --gradient-4: #8b5cf6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 40px 20px;
+            position: relative;
+            overflow-x: hidden;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.4;
+        }
+
+        .floating-shape {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .shape-1 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--gradient-1) 0%, transparent 70%);
+            top: -15%;
+            left: -15%;
+            animation-delay: 0s;
+        }
+
+        .shape-2 {
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, var(--gradient-4) 0%, transparent 70%);
+            bottom: -20%;
+            right: -15%;
+            animation-delay: 7s;
+        }
+
+        .shape-3 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--gradient-3) 0%, transparent 70%);
+            top: 40%;
+            right: 5%;
+            animation-delay: 14s;
+        }
+
+        .shape-4 {
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, var(--gradient-2) 0%, transparent 70%);
+            top: 20%;
+            left: 30%;
+            animation-delay: 3s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+            33% {
+                transform: translate(100px, -50px) scale(1.1);
+            }
+            66% {
+                transform: translate(-50px, 100px) scale(0.9);
+            }
+        }
+
+        .card {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            width: 100%;
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 48px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            animation: slideUp 0.8s ease-out;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 24px;
+            padding: 2px;
+            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2), var(--gradient-3), var(--gradient-4));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            animation: rotateGradient 8s linear infinite;
+        }
+        
+        @keyframes rotateGradient {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .search-container {
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 12px 20px;
+            font-size: 1rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+        }
+
+        .filter-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 500;
+            position: relative;
+            z-index: 10;
+            pointer-events: auto;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+            color: white;
+            border-color: transparent;
+        }
+
+        .category-section {
+            margin-bottom: 40px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .category-description {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .resource-card {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px var(--card-shadow);
+        }
+
+        .resource-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        .resource-author, .resource-creator {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+
+        .resource-note {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+        }
+
+        .resource-link {
+            display: inline-block;
+            padding: 10px 16px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            width:100%;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            cursor: pointer;
+            z-index: 10;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .resource-link:hover {
+            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+            color: white;
+            border-color: transparent;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px var(--accent-glow);
+        }
+
+        .resource-link-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .affiliate-badge {
+            background: var(--accent);
+            color: white;
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .resource-image {
+            margin-bottom: 12px;
+        }
+
+        .resource-image img {
+            width: 100%;
+            border-radius: 8px;
+            max-height: 200px;
+            object-fit: cover;
+        }
+
+        .disclaimer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--card-bg);
+            border: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1) rotate(180deg);
+            box-shadow: 0 8px 30px var(--accent-glow);
+        }
+        
+        .theme-toggle i {
+            font-size: 24px;
+            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .back-to-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+
+        .back-to-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px var(--accent-glow);
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                padding: 20px;
+                margin: 10px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .resources-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .theme-toggle {
+                top: 10px;
+                right: 10px;
+                width: 40px;
+                height: 40px;
+            }
+            
+            .back-to-home {
+                bottom: 10px;
+                left: 10px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class="fas fa-moon" id="themeIcon"></i>
+    </button>
+
+    <div class="bg-animation">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="floating-shape shape-4"></div>
+    </div>
+
+    <div class="card">
+        <header>
+            <h1>Resources & Recommendations</h1>
+            <p class="subtitle">Curated tools, books, and resources I personally recommend</p>
+        </header>
+
+        <div class="search-container">
+            <input type="text" id="searchBox" class="search-box" placeholder="Search resources...">
+        </div>
+
+        <div class="filter-container" id="filterContainer">
+            <!-- Filter buttons will be populated by JavaScript -->
+        </div>
+
+        <div id="resourcesContainer">
+            <!-- Resources will be populated by JavaScript -->
+        </div>
+
+        <div class="disclaimer">
+            <p>Some links may be affiliate links. This does not affect my recommendations.</p>
+        </div>
+    </div>
+
+    <!-- Back to Home Button -->
+    <a href="./index.html" class="back-to-home">
+        <i class="fas fa-arrow-left"></i> Back to Portfolio
+    </a>
+
+    <script>
+        // Theme switching functionality (same as main site)
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const htmlElement = document.documentElement;
+
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        htmlElement.setAttribute('data-theme', currentTheme);
+        updateThemeIcon(currentTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+
+        function updateThemeIcon(theme) {
+            themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        }
+
+        // Resource management
+        let allResources = [];
+        let currentSearch = '';
+        let currentCategory = 'all';
+
+        // Fetch resources from JSON file
+        async function fetchResources() {
+            try {
+                const response = await fetch('resources.json');
+                const data = await response.json();
+                allResources = data.categories;
+                generateFilterButtons();
+                renderResources();
+            } catch (error) {
+                console.error('Error fetching resources:', error);
+                document.getElementById('resourcesContainer').innerHTML = '<p>Error loading resources. Please try again later.</p>';
+            }
+        }
+
+        // Generate filter buttons based on categories
+        function generateFilterButtons() {
+            const filterContainer = document.getElementById('filterContainer');
+            
+            // Add "All" button
+            const allBtn = document.createElement('button');
+            allBtn.className = 'filter-btn active';
+            allBtn.textContent = 'All';
+            allBtn.onclick = () => filterByCategory('all');
+            filterContainer.appendChild(allBtn);
+            
+            // Add category buttons
+            allResources.forEach(category => {
+                const btn = document.createElement('button');
+                btn.className = 'filter-btn';
+                btn.textContent = category.title;
+                btn.onclick = () => filterByCategory(category.id);
+                filterContainer.appendChild(btn);
+            });
+        }
+
+        // Filter by category
+        function filterByCategory(categoryId) {
+            currentCategory = categoryId;
+            
+            // Update active button
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                if (categoryId === 'all' && btn.textContent.toLowerCase() === 'all') {
+                    btn.classList.add('active');
+                } else if (categoryId !== 'all' && btn.textContent === getCategoryTitleById(categoryId)) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+            
+            renderResources();
+        }
+        
+        // Helper function to get category title by ID
+        function getCategoryTitleById(id) {
+            const category = allResources.find(cat => cat.id === id);
+            return category ? category.title : '';
+        }
+
+        // Render resources based on current search and category filter
+        function renderResources() {
+            const container = document.getElementById('resourcesContainer');
+            container.innerHTML = '';
+            
+            // Filter categories and items based on search and selected category
+            let filteredCategories = allResources.map(category => {
+                // Apply category filter
+                if (currentCategory !== 'all' && category.id !== currentCategory) {
+                    return null; // Skip this category
+                }
+                
+                // Apply search filter to items
+                const filteredItems = category.items.filter(item => {
+                    const searchTerm = currentSearch.toLowerCase();
+                    return item.title.toLowerCase().includes(searchTerm) ||
+                           (item.author && item.author.toLowerCase().includes(searchTerm)) ||
+                           (item.creator && item.creator.toLowerCase().includes(searchTerm)) ||
+                           (item.note && item.note.toLowerCase().includes(searchTerm)) ||
+                           (item.tags && item.tags.some(tag => tag.toLowerCase().includes(searchTerm)));
+                });
+                
+                return {
+                    ...category,
+                    items: filteredItems
+                };
+            }).filter(category => category !== null && category.items.length > 0); // Only show categories with matching items
+            
+            // Render each category
+            filteredCategories.forEach(category => {
+                const section = document.createElement('section');
+                section.className = 'category-section';
+                
+                const title = document.createElement('h2');
+                title.className = 'category-title';
+                title.textContent = category.title;
+                section.appendChild(title);
+                
+                const description = document.createElement('p');
+                description.className = 'category-description';
+                description.textContent = category.description;
+                section.appendChild(description);
+                
+                const grid = document.createElement('div');
+                grid.className = 'resources-grid';
+                
+                category.items.forEach(item => {
+                    const card = document.createElement('div');
+                    card.className = 'resource-card';
+                    
+                    let content = '';
+                    
+                    // Add optional image if available
+                    if (item.image) {
+                        content += `<div class="resource-image">
+                                        <img src="${item.image}" alt="${item.title}" loading="lazy">
+                                    </div>`;
+                    }
+                    
+                    content += `<h3 class="resource-title">${item.title} </h3>`;
+                    
+                    if (item.author) {
+                        content += `<p class="resource-author">By: ${item.author}</p>`;
+                    }
+                    if (item.creator) {
+                        content += `<p class="resource-creator">Creator: ${item.creator}</p>`;
+                    }
+                    if (item.note) {
+                        content += `<p class="resource-note">${item.note}</p>`;
+                    }
+                    content += `<div class="resource-link-container">
+                                    <a href="${item.link}" class="resource-link" target="_blank">
+                                        Visit Resource
+                                        ${item.affiliate ? '<span class="affiliate-badge">AFFILIATE</span>' : ''}
+                                    </a>
+                                    
+                                </div>`;
+                    
+                    card.innerHTML = content;
+                    grid.appendChild(card);
+                });
+                
+                section.appendChild(grid);
+                container.appendChild(section);
+            });
+            
+            // Show message if no resources match
+            if (filteredCategories.length === 0) {
+                container.innerHTML = '<p>No resources match your search.</p>';
+            }
+        }
+
+        // Initialize search functionality
+        document.getElementById('searchBox').addEventListener('input', (e) => {
+            currentSearch = e.target.value;
+            renderResources();
+        });
+
+        // Load resources when page loads
+        document.addEventListener('DOMContentLoaded', fetchResources);
+    </script>
+</body>
+</html>
