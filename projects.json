@@ -5,7 +5,7 @@
         "icon": "fas fa-user-check",
         "tags": ["Laravel", "FastAPI", "Python", "Vector DB"],
         "category": "AI",
-        "github": "https://github.com/yourusername/project"
+        "github": "https://github.com/orgs/ucj-scm-final/repositories"
     },
     {
         "title": "Trip Planner App",
