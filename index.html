@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
@@ -111,7 +111,10 @@
             src="./thamilselven.jpg"
             alt="Poologarasa Thamilselven"
             class="profile-img"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+            onerror="
+              this.style.display = 'none';
+              this.nextElementSibling.style.display = 'flex';
+            "
           />
           <i class="fas fa-user profile-placeholder" style="display: none"></i>
         </div>
@@ -325,6 +328,22 @@
         <div class="timeline-item">
           <div class="timeline-header">
             <div>
+              <div class="timeline-title">Tech Lead</div>
+              <div class="timeline-company">OrbitOne Platforms (PVT) LTD</div>
+            </div>
+            <div class="timeline-date">Feb 2026 - Present</div>
+          </div>
+          <ul class="timeline-list">
+            <li>
+              Mentored engineers and enforced coding & system design standards
+            </li>
+            <li>Aligned technical decisions with product and business goals</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
               <div class="timeline-title">Software Engineer L2</div>
               <div class="timeline-company">Jyothi's ICT Zone Pvt Ltd</div>
             </div>
@@ -463,6 +482,15 @@
         <h2 class="section-title">Certifications</h2>
         <div class="cert-grid">
           <div class="cert-item">
+            <div class="cert-icon"><i class="fa-brands fa-salesforce"></i></div>
+            <div class="cert-content">
+              <div class="cert-name">
+                Salesforce Certified Platform Foundations
+              </div>
+              <div class="cert-issuer">Salesforce (2026)</div>
+            </div>
+          </div>
+          <div class="cert-item">
             <div class="cert-icon"><i class="fab fa-python"></i></div>
             <div class="cert-content">
               <div class="cert-name">Python for Beginners</div>
@@ -499,9 +527,7 @@
           <div class="publication-title">
             International Association of Engineers (IAENG)
           </div>
-          <div class="publication-venue">
-            Member
-          </div>
+          <div class="publication-venue">Member</div>
           <div class="publication-location">Since 14 Jan 2025</div>
         </div>
       </div>
@@ -725,7 +751,7 @@
 
       form.addEventListener("submit", function (e) {
         const hCaptcha = form.querySelector(
-          "textarea[name=h-captcha-response]"
+          "textarea[name=h-captcha-response]",
         ).value;
 
         if (!hCaptcha) {
